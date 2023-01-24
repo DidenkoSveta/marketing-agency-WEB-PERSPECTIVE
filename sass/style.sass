@@ -1,2 +1,109 @@
+$white: #FFFFFF
+$orange: #F47E51
+$red: #EC6A6A
+$gradient: linear-gradient(210.11deg, #EC6A6A 5.87%, #F47E51 90.46%)
+$black: #2F3338
+$grey: #F1F0F0
+$wgrey: #FAFAFA
+*
+   box-sizing: border-box
+   margin: 0
+   padding: 0
+button
+   border-radius: 30px
+   height: 51px
 body
-   background: green
+   background-color: $white
+   width: 100vw
+   color: $black
+   font-family: Roboto
+a
+   font-family: Roboto
+   text-decoration: none
+   color: $black
+   text-decoration: none
+li
+   list-style-type: none
+header
+   background-color: $wgrey
+   width: 100vw
+   position: fixed
+   top: 0
+.header__block
+   margin: 0 auto
+   max-width: 1440px
+   background-color: $wgrey
+   height: 100px
+   display: flex
+   align-items: center
+   justify-content: space-between
+   flex-wrap: wrap
+   align-content: center
+   padding: 0 100px
+   &-menu
+      display: flex
+      width: 770px
+      justify-content: space-between
+
+   &-lists
+      display: flex
+      width: 540px
+      justify-content: space-between
+      flex-wrap: wrap
+      align-items: center
+      li:hover
+         transform: scaleY(1.2)
+         a:hover
+            color: $orange
+   &-list
+      font-style: normal
+      font-weight: 600
+      font-size: 16px
+      line-height: 28px
+      align-items: center
+      text-transform: uppercase
+   &-logo
+      background-size: cover
+      background-repeat: no-repeat
+      height: 36px
+.button__feedback
+   width: 200px
+   color: $wgrey
+   background-color: $orange
+   border: none
+.button__feedback-header
+   padding: 15px 27px
+   border-radius: 30px
+   white-space: nowrap
+main
+   position: relative
+   top: 200px
+.slogan
+   max-width: 1440px
+   margin: 0 auto
+   padding: 0 100px
+.block__slogan
+   max-width: 590px
+   h1
+      font-weight: 700
+      font-size: 48px
+      line-height: 57px
+      margin-bottom: 80px
+      span
+         color: $orange
+   &-btn
+      width: 240px
+      background-color: $wgrey
+      border: 3px solid
+      font-weight: 600
+      font-size: 16px
+      line-height: 28px
+      img 
+         margin-right: 5px
+         margin: auto 5px
+   &-btns
+      margin-top: 80px
+.slogan-text
+   font-weight: 700
+   font-size: 32px
+   line-height: 54px
