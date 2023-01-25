@@ -15,6 +15,7 @@ body {
   width: 100vw;
   color: #2F3338;
   font-family: Roboto;
+  overflow-x: hidden;
 }
 
 a {
@@ -33,11 +34,13 @@ header {
   width: 100vw;
   position: fixed;
   top: 0;
+  z-index: 10;
 }
 
 .header__block {
   margin: 0 auto;
   max-width: 1440px;
+  overflow-x: hidden;
   background-color: #FAFAFA;
   height: 100px;
   display: -webkit-box;
@@ -78,14 +81,6 @@ header {
       -ms-flex-align: center;
           align-items: center;
 }
-.header__block-lists li:hover {
-  -webkit-transform: scaleY(1.2);
-      -ms-transform: scaleY(1.2);
-          transform: scaleY(1.2);
-}
-.header__block-lists li:hover a:hover {
-  color: #F47E51;
-}
 .header__block-list {
   font-style: normal;
   font-weight: 600;
@@ -100,6 +95,35 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   height: 36px;
+}
+
+.header__block-lists li a:hover {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: show;
+          animation-name: show;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+  color: #F47E51;
+}
+@-webkit-keyframes show {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.header__block-lists li a:active {
+  color: #F47E51;
 }
 
 .button__feedback {
@@ -118,44 +142,216 @@ header {
 main {
   position: relative;
   top: 200px;
+  width: 100vw;
 }
 
 .slogan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: -100px auto 0px;
   padding: 0 100px;
+  max-height: 900px;
+  overflow: hidden;
 }
 
 .block__slogan {
   max-width: 590px;
+  margin-top: 60px;
 }
 .block__slogan h1 {
   font-weight: 700;
   font-size: 48px;
   line-height: 57px;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
 }
 .block__slogan h1 span {
   color: #F47E51;
 }
+.block__slogan-feedback {
+  text-align: center;
+}
 .block__slogan-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 240px;
   background-color: #FAFAFA;
   border: 3px solid;
   font-weight: 600;
   font-size: 16px;
   line-height: 28px;
+  margin-left: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .block__slogan-btn img {
   margin-right: 5px;
   margin: auto 5px;
 }
 .block__slogan-btns {
-  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 120px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .slogan-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   font-weight: 700;
   font-size: 32px;
   line-height: 54px;
+}
+
+.slogan-text::after {
+  content: "";
+  display: block;
+  position: relative;
+  background: url("../assets/svg/arrow.svg");
+  color: #F47E51;
+  width: 60px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+}
+
+.block__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: -120px;
+  z-index: 1;
+  -webkit-animation-duration: 25s;
+          animation-duration: 25s;
+  -webkit-animation-name: slide;
+          animation-name: slide;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.block__slider-right {
+  margin-left: 30px;
+}
+.block__slider-left {
+  position: relative;
+  top: 160px;
+  margin-left: -30px;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-1200px);
+            transform: translateY(-1200px);
+  }
+}
+
+@keyframes slide {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-1200px);
+            transform: translateY(-1200px);
+  }
+}
+.block__slider-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 60px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.block__slider-card img {
+  height: 320px;
+  width: 320px;
+}
+
+h2 {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57px;
+}
+h2 span {
+  color: #F47E51;
+}
+
+.service {
+  max-width: 1440px;
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  padding: 80px 100px;
+}
+.service__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3vw;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.service__block-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  background-color: #FFFFFF;
+  padding: 25px 30px 13px;
+  width: 180px;
+  height: 150px;
+  -webkit-box-shadow: 0px 4px 15px rgba(47, 51, 56, 0.1), 0px 4px 15px rgba(236, 106, 106, 0.2);
+          box-shadow: 0px 4px 15px rgba(47, 51, 56, 0.1), 0px 4px 15px rgba(236, 106, 106, 0.2);
+  border-radius: 15px;
+  text-align: center;
+}
+.service__block-card img {
+  margin-bottom: 20px;
+  height: 50px;
+  width: 50px;
 }/*# sourceMappingURL=style.css.map */
