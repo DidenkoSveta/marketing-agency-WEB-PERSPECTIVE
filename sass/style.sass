@@ -45,6 +45,8 @@ header
 	position: fixed
 	top: 0
 	z-index: 10
+	@media (max-width: 1024px)
+		border-bottom: 1px solid rgba(244, 126, 81, 0.5)
 .header__block
 	margin: 0 auto
 	width: 1440px
@@ -66,6 +68,10 @@ header
 		padding: 0 30px
 	@media (max-width: 1024px)
 		width: 744px
+		height: 80px
+		padding: 0 20px
+	@media (max-width: 740px)
+		width: 428px
 	&-menu
 		display: flex
 		width: 770px
@@ -74,7 +80,8 @@ header
 			width: 680px
 			align-items: center
 		@media (max-width: 1024px)
-			width: 770px
+			width: 40vw
+			flex-direction: row-reverse
 	&-lists
 		display: flex
 		width: 540px
@@ -101,7 +108,7 @@ header
 		@media (max-width: 1230px)
 			position: relative
 			height: 30px
-			top:-3px
+			top: -3px
 		@media (max-width: 1024px)
 .header__block-lists
 	li
@@ -145,6 +152,10 @@ header
 	z-index: 11
 	@media (max-width: 1024px)
 		display: block
+	@media (max-width: 740px)
+		width: 52px
+		height: 32px
+		background-size: contain
 .burger:hover
 	cursor: pointer
 .close
@@ -164,9 +175,11 @@ header
 .navigation__header
 	@media (max-width: 1024px)
 		position: fixed
-		top: 100px
+		height: 100vh
+		width: 60vw
+		top: 10px
 		z-index: 12
-		background: $white
+		background: $wgrey
 		transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6)
 		transform: translateX(1000px)
 		transition: all 0.6s ease
@@ -174,12 +187,16 @@ header
 	transform: translateX(100px)
 	transition: all 0.6s ease
 #button-head
-	@media (max-width: 1024px)
+	@media (max-width: 740px)
 		display: none
 main
 	position: relative
 	top: 200px
 	margin: 0 auto
+	@media (max-width: 1024px)
+		display: flex
+		flex-direction: column
+		align-content: center
 .slogan
 	display: flex
 	width: 1440px
@@ -198,9 +215,26 @@ main
 		width: 1024px
 		padding: 0 30px
 		margin: -120px auto 0px
+	@media (max-width: 1024px)
+		width: 744px
+		max-height: 1055px
+		flex-direction: column
+		align-items: center
+		margin: -180px auto 0px
+		padding: 0 20px
 .block__slogan
 	max-width: 590px
 	margin-top: 60px
+	@media (max-width: 1024px)
+		min-width: 744px
+		padding: 0px 20px
+		max-height: 400px
+		position: relative
+		z-index: 2
+		background-color: $white
+	@media (max-width: 740px)
+		min-width: 740px
+		max-height: 600px
 	h1
 		font-weight: 700
 		font-size: 48px
@@ -214,8 +248,37 @@ main
 			font-size: 36px
 			margin-bottom: 70px
 			max-width: 420px
+		@media (max-width: 1024px)
+			margin-bottom: 40px
+			max-width: 625px
+		@media (max-width: 740px)
+			font-size: 28px
+			margin-bottom: 10px
+			max-width: 380px
+			line-height: 40px
 		span
 			color: $orange
+	&-background
+		@media (max-width: 740px)
+			width: 100vw
+			background-color: $white
+	&-text
+		@media (max-width: 1024px)
+			width: 700px
+			display: flex
+			font-size: 20px
+			flex-wrap: wrap
+			justify-content: space-between
+		@media (max-width: 740px)
+			display: flex
+			width: 380px
+		h3
+			white-space: nowrap
+			@media (max-width: 1024px)
+				width: 350px
+			@media (max-width: 740px)
+				width: 190px
+				font-size: 15px
 	&-feedback
 		text-align: center
 	&-btn
@@ -247,6 +310,9 @@ main
 		flex-wrap: wrap
 		justify-content: flex-start
 		align-items: center
+		@media (max-width: 1024px)
+			margin-top: 30px
+			margin-bottom: 40px
 .slogan-text
 	display: flex
 	align-items: center
@@ -258,6 +324,8 @@ main
 		font-size: 28px
 	@media (max-width: 1230px)
 		font-size: 24px
+		@media (max-width: 740px)
+			font-size: 16px
 .slogan-text::after
 	content: ""
 	display: block
@@ -272,6 +340,8 @@ main
 	@media (max-width: 1230px)
 		width: 30px
 		height: 15px
+	@media (max-width: 740px)
+		display: none
 .block__slider
 	display: flex
 	position: relative
@@ -287,6 +357,13 @@ main
 		top: -100px
 	@media (max-width: 1230px)
 		top: -80px
+	@media (max-width: 1024px)
+		height: 650px
+		width: 670px
+		top: 0px
+		z-index: -1
+		display: flex
+		justify-content: space-between
 	&-left
 		position: relative
 		top: 160px
@@ -303,6 +380,8 @@ main
 		gap: 50px
 	@media (max-width: 1230px)
 		gap: 40px
+	@media (max-width: 1024px)
+		gap: 60px
 	img
 		height: 320px
 		width: 320px
@@ -312,6 +391,9 @@ main
 		@media (max-width: 1230px)
 			height: 250px
 			width: 250px
+		@media (max-width: 1024px)
+			height: 320px
+			width: 320px
 h2
 	margin-bottom: 50px
 	font-weight: 700
@@ -322,6 +404,8 @@ h2
 	@media (max-width: 1230px)
 		font-size: 36px
 		margin-bottom: 40px
+	@media (max-width: 1024px)
+		margin-bottom: 30px
 	span
 		color: $orange
 .service
@@ -336,6 +420,9 @@ h2
 	@media (max-width: 1230px)
 		width: 1024px
 		padding: 40px 30px
+	@media (max-width: 1024px)
+		width: 703px
+		padding: 40px 20px
 	&__block
 		display: flex
 		gap: 3vw
@@ -345,6 +432,8 @@ h2
 			gap: 3vw
 		@media (max-width: 1230px)
 			gap: 1vw
+		@media (max-width: 1024px)
+			justify-content: space-between
 		&-card
 			display: flex
 			flex-direction: column

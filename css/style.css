@@ -67,6 +67,11 @@ header {
   top: 0;
   z-index: 10;
 }
+@media (max-width: 1024px) {
+  header {
+    border-bottom: 1px solid rgba(244, 126, 81, 0.5);
+  }
+}
 
 .header__block {
   margin: 0 auto;
@@ -105,6 +110,13 @@ header {
 @media (max-width: 1024px) {
   .header__block {
     width: 744px;
+    height: 80px;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 740px) {
+  .header__block {
+    width: 428px;
   }
 }
 .header__block-menu {
@@ -126,7 +138,11 @@ header {
 }
 @media (max-width: 1024px) {
   .header__block-menu {
-    width: 770px;
+    width: 40vw;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
 }
 .header__block-lists {
@@ -255,6 +271,13 @@ header {
     display: block;
   }
 }
+@media (max-width: 740px) {
+  .burger {
+    width: 52px;
+    height: 32px;
+    background-size: contain;
+  }
+}
 
 .burger:hover {
   cursor: pointer;
@@ -284,9 +307,11 @@ header {
 @media (max-width: 1024px) {
   .navigation__header {
     position: fixed;
-    top: 100px;
+    height: 100vh;
+    width: 60vw;
+    top: 10px;
     z-index: 12;
-    background: #FFFFFF;
+    background: #FAFAFA;
     -webkit-transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
          -o-transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
             transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
@@ -308,7 +333,7 @@ header {
   transition: all 0.6s ease;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 740px) {
   #button-head {
     display: none;
   }
@@ -318,6 +343,19 @@ main {
   position: relative;
   top: 200px;
   margin: 0 auto;
+}
+@media (max-width: 1024px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
 }
 
 .slogan {
@@ -349,10 +387,41 @@ main {
     margin: -120px auto 0px;
   }
 }
+@media (max-width: 1024px) {
+  .slogan {
+    width: 744px;
+    max-height: 1055px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: -180px auto 0px;
+    padding: 0 20px;
+  }
+}
 
 .block__slogan {
   max-width: 590px;
   margin-top: 60px;
+}
+@media (max-width: 1024px) {
+  .block__slogan {
+    min-width: 744px;
+    padding: 0px 20px;
+    max-height: 400px;
+    position: relative;
+    z-index: 2;
+    background-color: #FFFFFF;
+  }
+}
+@media (max-width: 740px) {
+  .block__slogan {
+    min-width: 740px;
+    max-height: 600px;
+  }
 }
 .block__slogan h1 {
   font-weight: 700;
@@ -374,8 +443,64 @@ main {
     max-width: 420px;
   }
 }
+@media (max-width: 1024px) {
+  .block__slogan h1 {
+    margin-bottom: 40px;
+    max-width: 625px;
+  }
+}
+@media (max-width: 740px) {
+  .block__slogan h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    max-width: 380px;
+    line-height: 40px;
+  }
+}
 .block__slogan h1 span {
   color: #F47E51;
+}
+@media (max-width: 740px) {
+  .block__slogan-background {
+    width: 100vw;
+    background-color: #FFFFFF;
+  }
+}
+@media (max-width: 1024px) {
+  .block__slogan-text {
+    width: 700px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 20px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+@media (max-width: 740px) {
+  .block__slogan-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 380px;
+  }
+}
+.block__slogan-text h3 {
+  white-space: nowrap;
+}
+@media (max-width: 1024px) {
+  .block__slogan-text h3 {
+    width: 350px;
+  }
+}
+@media (max-width: 740px) {
+  .block__slogan-text h3 {
+    width: 190px;
+    font-size: 15px;
+  }
 }
 .block__slogan-feedback {
   text-align: center;
@@ -434,6 +559,12 @@ main {
       -ms-flex-align: center;
           align-items: center;
 }
+@media (max-width: 1024px) {
+  .block__slogan-btns {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+}
 
 .slogan-text {
   display: -webkit-box;
@@ -459,6 +590,11 @@ main {
     font-size: 24px;
   }
 }
+@media (max-width: 1230px) and (max-width: 740px) {
+  .slogan-text {
+    font-size: 16px;
+  }
+}
 
 .slogan-text::after {
   content: "";
@@ -476,6 +612,11 @@ main {
   .slogan-text::after {
     width: 30px;
     height: 15px;
+  }
+}
+@media (max-width: 740px) {
+  .slogan-text::after {
+    display: none;
   }
 }
 
@@ -505,6 +646,20 @@ main {
 @media (max-width: 1230px) {
   .block__slider {
     top: -80px;
+  }
+}
+@media (max-width: 1024px) {
+  .block__slider {
+    height: 650px;
+    width: 670px;
+    top: 0px;
+    z-index: -1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 .block__slider-left {
@@ -553,6 +708,11 @@ main {
     gap: 40px;
   }
 }
+@media (max-width: 1024px) {
+  .block__slider-card {
+    gap: 60px;
+  }
+}
 .block__slider-card img {
   height: 320px;
   width: 320px;
@@ -567,6 +727,12 @@ main {
   .block__slider-card img {
     height: 250px;
     width: 250px;
+  }
+}
+@media (max-width: 1024px) {
+  .block__slider-card img {
+    height: 320px;
+    width: 320px;
   }
 }
 
@@ -585,6 +751,11 @@ h2 {
   h2 {
     font-size: 36px;
     margin-bottom: 40px;
+  }
+}
+@media (max-width: 1024px) {
+  h2 {
+    margin-bottom: 30px;
   }
 }
 h2 span {
@@ -611,6 +782,12 @@ h2 span {
     padding: 40px 30px;
   }
 }
+@media (max-width: 1024px) {
+  .service {
+    width: 703px;
+    padding: 40px 20px;
+  }
+}
 .service__block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -630,6 +807,13 @@ h2 span {
 @media (max-width: 1230px) {
   .service__block {
     gap: 1vw;
+  }
+}
+@media (max-width: 1024px) {
+  .service__block {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 .service__block-card {
