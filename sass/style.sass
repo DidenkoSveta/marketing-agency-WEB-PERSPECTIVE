@@ -12,6 +12,8 @@ $wgrey: #FAFAFA
 button
 	border-radius: 30px
 	height: 51px
+	@media (max-width: 1230px)
+		font-size: 15px
 body
 	background-color: $white
 	width: 100vw
@@ -25,7 +27,19 @@ a
 	text-decoration: none
 li
 	list-style-type: none
+hr
+	max-width: 1440px
+	heigth: 1px
+	border: 1px solid rgba(47, 51, 56, 0.3)
+	margin: 80px auto
+	@media (max-width: 1400px)
+		margin: 60px auto
+	@media (max-width: 1230px)
+		margin: 40px auto
 header
+	display: flex
+	justify-content: space-between
+	align-items: center
 	background-color: $wgrey
 	width: 100vw
 	position: fixed
@@ -33,7 +47,7 @@ header
 	z-index: 10
 .header__block
 	margin: 0 auto
-	max-width: 1440px
+	width: 1440px
 	overflow-x: hidden
 	background-color: $wgrey
 	height: 100px
@@ -43,17 +57,34 @@ header
 	flex-wrap: wrap
 	align-content: center
 	padding: 0 100px
+	@media (max-width: 1400px)
+		width: 1240px
+		padding: 0 80px
+		height: 90px
+	@media (max-width: 1230px)
+		width: 1024px
+		padding: 0 30px
+	@media (max-width: 1024px)
+		width: 744px
 	&-menu
 		display: flex
 		width: 770px
 		justify-content: space-between
-
+		@media (max-width: 1230px)
+			width: 680px
+			align-items: center
+		@media (max-width: 1024px)
+			width: 770px
 	&-lists
 		display: flex
 		width: 540px
 		justify-content: space-between
 		flex-wrap: wrap
 		align-items: center
+		@media (max-width: 1230px)
+			width: 470px
+		@media (max-width: 1024px)
+			flex-direction: column
 	&-list
 		font-style: normal
 		font-weight: 600
@@ -61,10 +92,17 @@ header
 		line-height: 28px
 		align-items: center
 		text-transform: uppercase
+		@media (max-width: 1230px)
+			font-size: 15px
 	&-logo
 		background-size: cover
 		background-repeat: no-repeat
 		height: 36px
+		@media (max-width: 1230px)
+			position: relative
+			height: 30px
+			top:-3px
+		@media (max-width: 1024px)
 .header__block-lists
 	li
 		a:hover
@@ -80,25 +118,86 @@ header
 		a:active
 			color: $orange
 .button__feedback
+	padding: 15px 27px
 	width: 200px
+	border-radius: 30px
 	color: $wgrey
 	background-color: $orange
 	border: none
-.button__feedback-header
-	padding: 15px 27px
-	border-radius: 30px
 	white-space: nowrap
+	@media (max-width: 1230px)
+		width: 170px
+		display: flex
+		justify-content: center
+		font-size: 15px
+.header__burger
+	margin-left: auto
+	margin-right: 25px
+.burger
+	display: none
+	width: 60px
+	height: 37px
+	background-size: cover
+	background-repeat: no-repeat
+	border-radius: 0px
+	background: url("../assets/svg/burger-menu.svg")
+	border: none
+	z-index: 11
+	@media (max-width: 1024px)
+		display: block
+.burger:hover
+	cursor: pointer
+.close
+	display: none
+	width: 46px
+	height: 46px
+	margin-top: 20px
+	margin-left: 20px
+	background: url("../assets/svg/close-menu.svg")
+	background-size: contain
+	background-repeat: no-repeat
+	@media (max-width: 1024px)
+		display: block
+		border: none
+.close:hover
+	cursor: pointer
+.navigation__header
+	@media (max-width: 1024px)
+		position: fixed
+		top: 100px
+		z-index: 12
+		background: $white
+		transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6)
+		transform: translateX(1000px)
+		transition: all 0.6s ease
+.navigation__header.show
+	transform: translateX(100px)
+	transition: all 0.6s ease
+#button-head
+	@media (max-width: 1024px)
+		display: none
 main
 	position: relative
 	top: 200px
-	width: 100vw
+	margin: 0 auto
 .slogan
 	display: flex
-	max-width: 1440px
+	width: 1440px
 	margin: -100px auto 0px
 	padding: 0 100px
 	max-height: 900px
 	overflow: hidden
+	justify-content: space-between
+	@media (max-width: 1400px)
+		max-height: 810px
+		width: 1240px
+		padding: 0 80px
+		margin: -120px auto 0px
+	@media (max-width: 1230px)
+		max-height: 810px
+		width: 1024px
+		padding: 0 30px
+		margin: -120px auto 0px
 .block__slogan
 	max-width: 590px
 	margin-top: 60px
@@ -107,6 +206,14 @@ main
 		font-size: 48px
 		line-height: 57px
 		margin-bottom: 120px
+		@media (max-width: 1400px)
+			font-size: 40px
+			margin-bottom: 100px
+			max-width: 470px
+		@media (max-width: 1230px)
+			font-size: 36px
+			margin-bottom: 70px
+			max-width: 420px
 		span
 			color: $orange
 	&-feedback
@@ -122,9 +229,18 @@ main
 		margin-left: 25px
 		align-items: center
 		justify-content: center
+		@media (max-width: 1400px)
+			margin-left: 15px
+		@media (max-width: 1230px)
+			width: 220px
+			font-size: 15px
+			line-height: 25px
 		img
 			margin-right: 5px
 			margin: auto 5px
+			@media (max-width: 1230px)
+				width: 23px
+				height: 19px
 	&-btns
 		display: flex
 		margin-top: 120px
@@ -138,6 +254,10 @@ main
 	font-weight: 700
 	font-size: 32px
 	line-height: 54px
+	@media (max-width: 1400px)
+		font-size: 28px
+	@media (max-width: 1230px)
+		font-size: 24px
 .slogan-text::after
 	content: ""
 	display: block
@@ -149,21 +269,27 @@ main
 	background-size: contain
 	background-repeat: no-repeat
 	margin-left: 10px
+	@media (max-width: 1230px)
+		width: 30px
+		height: 15px
 .block__slider
 	display: flex
 	position: relative
 	top: -120px
 	z-index: 1
+	gap: 3vw
 	animation-duration: 25s
 	animation-name: slide
 	animation-iteration-count: infinite
 	animation-timing-function: linear
-	&-right
-		margin-left: 30px
+	margin-right: 0px
+	@media (max-width: 1400px)
+		top: -100px
+	@media (max-width: 1230px)
+		top: -80px
 	&-left
 		position: relative
 		top: 160px
-		margin-left: -30px
 @keyframes slide
 	0%
 		transform: translateY(0)
@@ -173,27 +299,52 @@ main
 	display: flex
 	gap: 60px
 	flex-direction: column
+	@media (max-width: 1400px)
+		gap: 50px
+	@media (max-width: 1230px)
+		gap: 40px
 	img
 		height: 320px
 		width: 320px
+		@media (max-width: 1400px)
+			height: 280px
+			width: 280px
+		@media (max-width: 1230px)
+			height: 250px
+			width: 250px
 h2
 	margin-bottom: 50px
 	font-weight: 700
 	font-size: 48px
 	line-height: 57px
+	@media (max-width: 1400px)
+		font-size: 40px
+	@media (max-width: 1230px)
+		font-size: 36px
+		margin-bottom: 40px
 	span
 		color: $orange
 .service
-	max-width: 1440px
+	width: 1440px
 	overflow-x: hidden
 	box-sizing: border-box
 	margin: 0 auto
 	padding: 80px 100px
+	@media (max-width: 1400px)
+		width: 1240px
+		padding: 80px 80px
+	@media (max-width: 1230px)
+		width: 1024px
+		padding: 40px 30px
 	&__block
 		display: flex
 		gap: 3vw
 		flex-wrap: wrap
 		justify-content: center
+		@media (max-width: 1400px)
+			gap: 3vw
+		@media (max-width: 1230px)
+			gap: 1vw
 		&-card
 			display: flex
 			flex-direction: column
@@ -202,13 +353,36 @@ h2
 			font-size: 16px
 			line-height: 19px
 			background-color: $white
-			padding: 25px 30px 13px
+			padding: 30px 30px 13px
 			width: 180px
-			height: 150px
+			height: 180px
 			box-shadow: 0px 4px 15px rgba(47, 51, 56, 0.1), 0px 4px 15px rgba(236, 106, 106, 0.2)
 			border-radius: 15px
 			text-align: center
+			transition: transform 1s
+			transform-style: preserve-3d
 			img
 				margin-bottom: 20px
 				height: 50px
 				width: 50px
+.service__block-card:hover
+	transform: rotateY(180deg)
+	cursor: pointer
+.card-face
+	display: flex
+	flex-direction: column
+	align-items: center
+	position: relative
+	top: 0
+	bottom: 0
+	backface-visibility: hidden
+.card-face.back
+	display: flex
+	justify-content: center
+	position: absolute
+	vertical-align: middle
+	font-size: 14px
+	font-weight: 600
+	padding: 20px 10px
+	color: $black
+	transform: rotateY(180deg)
