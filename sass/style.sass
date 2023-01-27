@@ -1,0 +1,455 @@
+$white: #FFFFFF
+$orange: #F47E51
+$red: #EC6A6A
+$gradient: linear-gradient(210.11deg, #EC6A6A 5.87%, #F47E51 90.46%)
+$black: #2F3338
+$grey: #F1F0F0
+$wgrey: #FAFAFA
+*
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+button
+	border-radius: 30px
+	height: 51px
+	font-size: 16px
+	@media (max-width: 1230px)
+		font-size: 15px
+body
+	background-color: $wgrey
+	width: 100vw
+	color: $black
+	font-family: Roboto
+	overflow-x: hidden
+a
+	font-family: Roboto
+	text-decoration: none
+	color: $black
+	text-decoration: none
+li
+	list-style-type: none
+hr
+	max-width: 1440px
+	height: 0px
+	border: 1px solid rgba(47, 51, 56, 0.3)
+	margin: 40px auto
+	@media (max-width: 1400px)
+		margin: 60px auto
+	@media (max-width: 1230px)
+		margin: 40px auto
+header
+	background-color: $wgrey
+	position: fixed
+	top: 0
+	z-index: 10
+	width: 100vw
+	@media (max-width: 1024px)
+		border-bottom: 1px solid rgba(244, 126, 81, 0.5)
+.header__block
+	margin: 0 auto
+	max-width: 1440px
+	height: 100px
+	display: flex
+	align-items: center
+	justify-content: space-between
+	flex-wrap: wrap
+	padding: 0 100px
+	@media (max-width: 1230px)
+		height: 90px
+	&-lists
+		display: flex
+		justify-content: space-between
+		width: 540px
+	&-list
+		font-style: normal
+		font-weight: 600
+		font-size: 16px
+		line-height: 28px
+		align-items: center
+		text-transform: uppercase
+	&-logo
+		background-size: cover
+		background-repeat: no-repeat
+		height: 36px
+.button__feedback
+	padding: 15px 27px
+	width: 200px
+	border-radius: 30px
+	color: $wgrey
+	background-color: $orange
+	border: none
+	white-space: nowrap
+	display: flex
+	justify-content: center
+.slider
+	width: 670px
+	height: 960px
+	overflow: hidden
+.block__slider
+	display: flex
+	position: relative
+	z-index: 1
+	gap: 3vw
+	animation-duration: 25s
+	animation-name: slide
+	animation-iteration-count: infinite
+	animation-timing-function: linear
+	margin-right: 0px
+	&-left
+		position: relative
+		top: 160px
+	@keyframes slide
+		0%
+			transform: translateY(0)
+		100%
+			transform: translateY(-1000px)
+	&-card
+		display: flex
+		gap: 60px
+		flex-direction: column
+	img
+		height: 320px
+		width: 320px
+h1
+	font-weight: 700
+	font-size: 48px
+	line-height: 57px
+	margin-bottom: 120px
+h2
+	margin-bottom: 50px
+	font-weight: 700
+	font-size: 48px
+	line-height: 57px
+	@media (max-width: 1400px)
+		font-size: 40px
+	@media (max-width: 1230px)
+		font-size: 36px
+		margin-bottom: 40px
+	@media (max-width: 1024px)
+		margin-bottom: 30px
+	span
+		color: $orange
+h3
+	white-space: nowrap
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	font-weight: 700
+	font-size: 32px
+	line-height: 54px
+h3::after
+	content: ""
+	display: block
+	position: relative
+	background: url("../assets/svg/arrow.svg")
+	color: $orange
+	width: 60px
+	height: 30px
+	background-size: contain
+	background-repeat: no-repeat
+	margin-left: 10px
+h4
+	font-weight: 600
+	font-size: 32px
+	line-height: 60px
+.block__slogan
+	max-width: 590px
+	margin-top: 60px
+	&-btns
+		display: flex
+		margin-top: 120px
+		flex-wrap: wrap
+		justify-content: flex-start
+		align-items: center
+	&-btn
+		display: flex
+		width: 240px
+		background-color: $wgrey
+		border: 3px solid
+		font-weight: 600
+		font-size: 16px
+		line-height: 28px
+		margin-left: 25px
+		align-items: center
+		justify-content: center
+		@media (max-width: 1400px)
+			margin-left: 15px
+		@media (max-width: 1230px)
+			width: 220px
+			font-size: 15px
+			line-height: 25px
+		img
+			margin-right: 5px
+			margin: auto 5px
+			@media (max-width: 1230px)
+				width: 23px
+				height: 19px
+.slogan
+	width: 100vw
+	background-color: $wgrey
+	&__block
+		display: flex
+		max-width: 1440px
+		margin: 0 auto
+		padding: 100px 100px 0px 100px
+		overflow: hidden
+		justify-content: space-between
+.service__block
+	max-width: 1440px
+	overflow-x: hidden
+	box-sizing: border-box
+	margin: 0 auto
+	padding: 50px 100px 40px
+	&-grid
+		display: flex
+		gap: 3vw
+		flex-wrap: wrap
+		justify-content: center
+		padding-bottom: 40px
+	&-card
+		display: flex
+		flex-direction: column
+		align-items: center
+		font-weight: 600
+		font-size: 16px
+		line-height: 19px
+		background-color: $white
+		padding: 30px 30px 13px
+		width: 180px
+		height: 180px
+		box-shadow: 0px 4px 15px rgba(47, 51, 56, 0.1), 0px 4px 15px rgba(236, 106, 106, 0.2)
+		border-radius: 15px
+		text-align: center
+		transition: transform 1s
+		transform-style: preserve-3d
+		img
+			margin-bottom: 20px
+			height: 50px
+			width: 50px
+.service__block-card:hover
+	transform: rotateY(180deg)
+	cursor: pointer
+.card-face
+	display: flex
+	flex-direction: column
+	align-items: center
+	position: relative
+	top: 0
+	bottom: 0
+	backface-visibility: hidden
+.card-face.back
+	display: flex
+	justify-content: center
+	position: absolute
+	vertical-align: middle
+	font-size: 14px
+	font-weight: 600
+	padding: 20px 10px
+	color: $black
+	transform: rotateY(180deg)
+.cases
+	&__block
+		max-width: 1440px
+		overflow-x: hidden
+		box-sizing: border-box
+		margin: 0 auto
+		padding: 10px 100px
+		&-btn
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-wrap: nowrap
+			font-weight: 600
+			font-size: 18px
+			line-height: 28px
+			color: $wgrey
+			background-color: $black
+			height: 52px
+			width: 241px
+			margin: 0 auto
+			border-radius: 30px
+		&-grid
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+		&-subtitle
+			max-width: 420px
+			font-weight: 400
+			font-size: 18px
+			line-height: 21px
+			padding-bottom: 40px
+			margin-top: -30px
+		&-card
+			width: 390px
+			height: 570px
+			img
+				height: 390px
+				width: 390px
+				background-size: contain
+				background-repeat: no-repeat
+		&-name
+			font-weight: 700
+			font-size: 18px
+			line-height: 21px
+			padding: 20px 0
+			max-width: 300px
+		&-text
+			font-weight: 400
+			font-size: 18px
+			line-height: 21px
+			max-width: 390px
+.cases__block-card:hover
+	transform: translateY(-20px)
+	transition-duration: 0.5s
+.about
+	margin-top: 80px
+	background-image: url("../assets/bg/grid-bg.png")
+	background-size: cover
+	background-repeat: no-repeat
+	&__block
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		max-width: 1440px
+		box-sizing: border-box
+		margin: 0 auto
+		padding: 80px 100px 80px
+		&-company
+			max-width: 550px
+		&-title
+			margin-bottom: 5px
+			span
+				color: $wgrey
+		&-subtitle
+			margin-bottom: 40px
+		&-text
+			font-weight: 600
+			font-size: 18px
+			line-height: 23px
+		&-grid
+			display: flex
+			width: 600px
+			gap: 35px
+		&-card
+			display: flex
+			flex-direction: column
+			align-items: center
+			width: 285px
+			background: #FFFFFF
+			box-shadow: 4px 4px 15px rgba(47, 51, 56, 0.3), 0px 4px 15px rgba(236, 106, 106, 0.2)
+			border-radius: 15px
+			padding: 30px 25px
+		&-litlecard
+			height: 155px
+			width: 285px
+		&-bigcard
+			height: 225px
+			width: 285px
+		&-left
+			display: flex
+			flex-direction: column
+			gap: 40px
+		&-right
+			gap: 40px
+			display: flex
+			flex-direction: column
+		&-num
+			font-weight: 700
+			font-size: 32px
+			line-height: 38px
+		&-textcard
+			color: rgba(47, 51, 56, 0.8)
+			font-weight: 600
+			font-size: 18px
+			line-height: 22px
+			text-align: center
+#button-about
+	background: rgba(47, 51, 56, 0)
+	border: 3px solid #2F3338
+	color: $black
+	font-weight: 900
+	font-size: 16px
+	line-height: 28px
+	margin-top: 40px
+.trust
+	&__block
+		max-width: 1440px
+		box-sizing: border-box
+		margin: 0 auto
+		padding: 80px 100px 40px
+		&-slider
+			display: flex
+			flex-direction: column
+			gap: 25px
+			max-width: 1240px
+			overflow: hidden
+			margin-bottom: 80px
+		&-slide
+			display: flex
+			gap: 25px
+		&-card
+			display: flex
+			align-items: center
+			justify-content: center
+			border: 1px solid rgba(47, 51, 56, 0.7)
+			height: 150px
+			min-width: 300px
+			padding: 30px
+			box-sizing: border-box
+			img
+				display: block
+				background-size: contain
+				background-repeat: no-repeat
+				margin: 0 auto
+.grayscale
+	filter: grayscale(1)
+	transition: 0.5s
+.grayscale:hover
+	filter: grayscale(0)
+	cursor: pointer
+	transition: transform 200ms ease
+#trust__slide-1, #trust__slide-3
+	justify-content: flex-end
+	animation-duration: 50s
+	animation-name: slide-right
+	animation-iteration-count: infinite
+	animation-timing-function: linear
+	margin-right: 0px
+@keyframes slide-right
+	0%
+		transform: translateX(0)
+	100%
+		transform: translateX(1300px)
+#trust__slide-2
+	justify-content: flex-start
+	animation-duration: 50s
+	animation-name: slide-left
+	animation-iteration-count: infinite
+	animation-timing-function: linear
+@keyframes slide-left
+	0%
+		transform: translateX(0)
+	100%
+		transform: translateX(-1300px)
+.privilege
+	&__block
+		max-width: 1440px
+		box-sizing: border-box
+		margin: 0 auto
+		padding: 0px 100px 80px
+		&-grid 
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			gap: 4vh
+		&-card
+			background: $white
+			box-shadow: 4px 4px 30px rgba(47, 51, 56, 0.3)
+			border-radius: 25px
+			width: 380px
+			height: 350px
+			padding: 16px 33px
+.privilege__block-card:hover
+	transform: translateY(-20px)
+	transition-duration: 0.5s
+	cursor: default
