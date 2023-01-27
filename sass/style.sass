@@ -437,7 +437,7 @@ h4
 		box-sizing: border-box
 		margin: 0 auto
 		padding: 0px 100px 80px
-		&-grid 
+		&-grid
 			display: flex
 			flex-wrap: wrap
 			justify-content: space-between
@@ -453,3 +453,60 @@ h4
 	transform: translateY(-20px)
 	transition-duration: 0.5s
 	cursor: default
+.faq
+	&__block
+		max-width: 1440px
+		box-sizing: border-box
+		margin: 0 auto
+		padding: 0px 100px 80px
+		&-grid
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			gap: 30px
+			max-width: 1240px
+			margin: 0 auto
+		&-card
+			width: 600px
+		&-panel
+			padding: 0 18px
+			display: none
+			background-color: white
+			overflow: hidden
+		&-text
+			font-size: 18px
+			padding: 20px 1px
+			background-color: $white
+			letter-spacing: 0.15px
+			line-height: 28px
+			span
+				color: $orange
+#faq__block-btn
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 1px 40px
+	background: #FFFFFF
+	box-shadow: 4px 4px 30px rgba(47, 51, 56, 0.3)
+	border-radius: 25px
+	border-color: transparent
+	width: 600px
+	height: 81px
+	font-size: 18px
+	transition: 0.4s
+	cursor: pointer
+#faq__block-btn::after
+	content: ""
+	display: block
+	position: relative
+	background: url("../assets/svg/faq.svg")
+	color: $orange
+	width: 15px
+	height: 52px
+	background-size: contain
+	background-repeat: no-repeat
+	margin-right: 10px
+.active, .accordion:hover
+	background-color: $grey
+	transform: scale(1.05)
+	transition-duration: 0.5s

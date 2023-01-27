@@ -802,4 +802,92 @@ h4 {
        -o-transition-duration: 0.5s;
           transition-duration: 0.5s;
   cursor: default;
+}
+
+.faq__block {
+  max-width: 1440px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0px 100px 80px;
+}
+.faq__block-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.faq__block-card {
+  width: 600px;
+}
+.faq__block-panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+.faq__block-text {
+  font-size: 18px;
+  padding: 20px 1px;
+  background-color: #FFFFFF;
+  letter-spacing: 0.15px;
+  line-height: 28px;
+}
+.faq__block-text span {
+  color: #F47E51;
+}
+
+#faq__block-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1px 40px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 4px 4px 30px rgba(47, 51, 56, 0.3);
+          box-shadow: 4px 4px 30px rgba(47, 51, 56, 0.3);
+  border-radius: 25px;
+  border-color: transparent;
+  width: 600px;
+  height: 81px;
+  font-size: 18px;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+#faq__block-btn::after {
+  content: "";
+  display: block;
+  position: relative;
+  background: url("../assets/svg/faq.svg");
+  color: #F47E51;
+  width: 15px;
+  height: 52px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+.active, .accordion:hover {
+  background-color: #F1F0F0;
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }/*# sourceMappingURL=style.css.map */
