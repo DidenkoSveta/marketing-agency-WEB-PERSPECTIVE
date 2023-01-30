@@ -24,7 +24,19 @@
             <!-- <button type="button" class="close header__close"></button> -->
             <ul class="header__block-lists navigation__menu">
                <li class="header__block-link"><a class="header__block-list" href="#">Главная</a></li>
-               <li><a class="header__block-list" href="#">Услуги</a></li>
+               <li class="header__block-taplink"><a class="header__block-list" href="#">Услуги</a>
+                  <ul class="header__block-underlists">
+                     <li class="header__block-underlist"><a href="#">Контекстная реклама</a></li>
+                     <li class="header__block-underlist"><a href="#">SEO-продвижение</a></li>
+                     <li class="header__block-underlist"><a href="#">Создание сайтов</a></li>
+                     <li class="header__block-underlist"><a href="#">Таргетированная реклама</a></li>
+                     <li class="header__block-underlist"><a href="#">Внедрение CRM</a></li>
+                     <li class="header__block-underlist"><a href="#">Индивидуальный стиль</a></li>
+                     <li class="header__block-underlist"><a href="#">Реклама на маркетплейсах</a></li>
+                     <li class="header__block-underlist"><a href="#">Холодные звонки</a></li>
+                     <li class="header__block-underlist"><a href="#">Email маркетинг</a></li>
+                  </ul>
+               </li>
                <li><a class="header__block-list" href="#">Стоимость</a></li>
                <li><a class="header__block-list" href="#">Кейсы</a></li>
                <li><a class="header__block-list" href="#">Блог</a></li>
@@ -85,40 +97,47 @@
                      реклама
                   </div>
                   <div class="card-face back">Самый эффективный вид существующей рекламы
-                     Объявления показываются горячим клиентам в поисковой выдаче Яндекса.</div>
+                     Объявления показываются горячим клиентам в поисковой выдаче Яндекса.
+                     <a class="detailed" href="#">Подробнее</a>
+                  </div>
                </div>
                <div class="service__block-card">
                   <div class="card-face front"><img src="assets/svg/service/service2.svg" alt="service">SEO продвижение
                   </div>
                   <div class="card-face back">Выведем сайт в ТОП Яндекс и Google
-                     Обеспечим рост целевых клиентов и продаж</div>
+                     Обеспечим рост целевых клиентов и продаж
+                     <a class="detailed" href="#">Подробнее</a>
+                  </div>
                </div>
                <div class="service__block-card">
                   <div class="card-face front"><img src="assets/svg/service/service3.svg" alt="service">Создание сайтов
                   </div>
                   <div class="card-face back">Landing page<br>
                      Корпорптивные сайты<br>
-                     Интернет-магазины</div>
+                     Интернет-магазины
+                     <a class="detailed" href="#">Подробнее</a>
+                  </div>
                </div>
                <div class="service__block-card">
                   <div class="card-face front"><img src="assets/svg/service/service4.svg" alt="service">Таргетированная
                      реклама
                   </div>
-                  <div class="card-face back">Реклама в социальных сетях (Вконтакте, Одноклассники и т.д.)
+                  <div class="card-face back">Реклама в социальных сетях (Вконтакте, Одноклассники и т.д.)<a
+                        class="detailed" href="#">Подробнее</a>
                   </div>
                </div>
                <div class="service__block-card">
                   <div class="card-face front"><img src="assets/svg/service/service5.svg" alt="service">Внедрение CRM
                   </div>
                   <div class="card-face back">Подбор и интеграция CRM
-                     Настройка и автоматизация бизнес процессов.</div>
+                     Настройка и автоматизация бизнес процессов.<a class="detailed" href="#">Подробнее</a></div>
                </div>
                <div class="service__block-card">
                   <div class="card-face front"><img src="assets/svg/service/service6.svg" alt="service">Индивидуальный
                      стиль
                   </div>
                   <div class="card-face back">Уникальные логотипы визитки, баннеры, фирменные стили, всё чтобы
-                     сделать Вашу компанию неповторимой и узнаваемой.</div>
+                     сделать Вашу компанию неповторимой и узнаваемой.<a class="detailed" href="#">Подробнее</a></div>
                </div>
                <div class="service__block-card">
                   <div class="card-face front"><img src="assets/svg/service/service7.svg" alt="service">Реклама на
@@ -126,17 +145,19 @@
                   </div>
                   <div class="card-face back">Авито<br>
                      2ГИС<br>
-                     Яндекс Услуги, и др</div>
+                     Яндекс Услуги, и др <a class="detailed" href="#">Подробнее</a></div>
                </div>
                <div class="service__block-card">
                   <div class="card-face front"><img src="assets/svg/service/service8.svg" alt="service">Холодные звонки
                   </div>
-                  <div class="card-face back">Изучение ниши <br>Составление скриптов.<br></div>
+                  <div class="card-face back">Изучение ниши <br>Составление скриптов. <a class="detailed"
+                        href="#">Подробнее</a><br></div>
                </div>
                <div class="service__block-card">
                   <div class="card-face front"><img src="assets/svg/service/service9.svg" alt="service">Email маркетинг
                   </div>
-                  <div class="card-face back">Продвижение продуктов или сервисов через email рассылки.
+                  <div class="card-face back">Продвижение продуктов или сервисов через email рассылки. <a
+                        class="detailed" href="#">Подробнее</a>
                   </div>
                </div>
             </div>
@@ -221,12 +242,12 @@
                </div>
                <div class="about__block-right">
                   <div class="about__block-card about__block-bigcard">
-                     <p class="about__block-num">100+</p>
-                     <p class="about__block-textcard">работающих сайтов</p>
-                  </div>
-                  <div class="about__block-card about__block-litlecard">
                      <p class="about__block-num">20+</p>
                      <p class="about__block-textcard">помогли с автоматизацией продаж</p>
+                  </div>
+                  <div class="about__block-card about__block-litlecard">
+                     <p class="about__block-num">100+</p>
+                     <p class="about__block-textcard">работающих сайтов</p>
                   </div>
                </div>
 
@@ -535,20 +556,20 @@
             <ul class="footer__block-lists">
                <li><a class="footer__block-title" href="#">Услуги</a></li>
                <li class="footer__block-change"><a class="footer__block-list" href="#">Контекстная реклама</a></li>
-               <li><a class="footer__block-list" href="#">Индивидуальный стиль</a></li>
-               <li><a class="footer__block-list" href="#">Таргетированная реклама</a></li>
                <li><a class="footer__block-list" href="#">SEO продвижение</a></li>
-               <li><a class="footer__block-list" href="#">Реклама на маркетплейсах</a></li>
                <li><a class="footer__block-list" href="#">Создание сайтов</a></li>
-               <li><a class="footer__block-list" href="#">Email маркетинг</a></li>
-               <li><a class="footer__block-list" href="#">Холодные звонки</a></li>
+               <li><a class="footer__block-list" href="#">Таргетированная реклама</a></li>
                <li><a class="footer__block-list" href="#">Внедрение CRM</a></li>
+               <li><a class="footer__block-list" href="#">Индивидуальный стиль</a></li>
+               <li><a class="footer__block-list" href="#">Реклама на маркетплейсах</a></li>
+               <li><a class="footer__block-list" href="#">Холодные звонки</a></li>
+               <li><a class="footer__block-list" href="#">Email маркетинг</a></li>
             </ul>
          </nav>
          <nav class="navigation__footer">
             <ul class="footer__block-lists">
                <li><a class="footer__block-title" href="#">Навигация</a></li>
-               <li><a class="footer__block-list" href="#">О нас</a></li>
+               <li><a class="footer__block-list" href="#">Главная</a></li>
                <li><a class="footer__block-list" href="#">Услуги</a></li>
                <li><a class="footer__block-list" href="#">Стоимость</a></li>
                <li><a class="footer__block-list" href="#">Кейсы</a></li>
