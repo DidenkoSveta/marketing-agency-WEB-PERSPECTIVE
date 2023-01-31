@@ -11,7 +11,7 @@ $wgrey: #FAFAFA
 	padding: 0
 button
 	border-radius: 30px
-	height: 61px
+	height: 56px
 	font-size: 16px
 	@media (max-width: 1230px)
 		font-size: 15px
@@ -71,8 +71,42 @@ header
 		background-size: cover
 		background-repeat: no-repeat
 		height: 36px
+.header__block-list:hover
+	text-decoration: underline
+	color: $orange
+.header__block-taplink::after
+	content: ""
+	display: inline-block
+	position: relative
+	background: url("../assets/svg/drop.svg")
+	color: $orange
+	height: 10px
+	width: 22px
+	background-size: contain
+	background-repeat: no-repeat
+.header__block-taplink
+	ul
+		display: none
+		max-width: 300px
+		position: absolute
+		margin-left: -20px
+		font-size: 18px
+		padding: 15px
+		z-index: 11
+		background-color: $wgrey
+.header__block-taplink:hover
+	ul
+		display: flex
+		flex-direction: column
+		flex-direction: column
+		gap: 20px
+		border-radius: 30px
+.header__block-underlist:hover
+	text-decoration: underline
+	a
+		color: $orange
 .button__feedback
-	padding: 20px 27px
+	padding: 15px 27px
 	width: 200px
 	border-radius: 30px
 	color: $wgrey
@@ -81,20 +115,32 @@ header
 	white-space: nowrap
 	display: flex
 	justify-content: center
+	border: 3px solid #F47E51
+.button__feedback:hover
+	box-sizing: border-box
+	background-color: $red
+	border: 3px solid $red
+	border-radius: 30px
+	transform: scale(1.05)
+	transition-duration: 0.1s
+.button__feedback:active
+	background-color: $red
+	transform: scale(1.05)
+	transition-duration: 0.1s
 .slider
-	width: 670px
+	max-width: 800px
 	height: 960px
 	overflow: hidden
 .block__slider
 	display: flex
 	position: relative
 	z-index: 1
-	gap: 3vw
+	gap: 2vw
 	animation-duration: 25s
 	animation-name: slide
 	animation-iteration-count: infinite
 	animation-timing-function: linear
-	margin-right: 0px
+	margin-right: 40px
 	&-left
 		position: relative
 		top: 160px
@@ -115,6 +161,8 @@ h1
 	font-size: 48px
 	line-height: 57px
 	margin-bottom: 120px
+h1.element-show
+	animation: wipe-enter 1s
 h2
 	margin-bottom: 50px
 	font-weight: 700
@@ -129,14 +177,27 @@ h2
 		margin-bottom: 30px
 	span
 		color: $orange
+h2.element-show
+	animation: wipe-enter 1s
+@keyframes wipe-enter
+	0%
+		opacity: 0
+		transform: translateX(100px)
+	100%
+		opacity: 1
+		transform: translateX(0px)
 h3
 	white-space: nowrap
 	display: flex
 	align-items: center
 	justify-content: flex-start
 	font-weight: 700
-	font-size: 32px
+	font-size: 26px
 	line-height: 54px
+	cursor: pointer
+h3:hover
+	transform: scale(1.01)
+	transition: 0.1s
 h3::after
 	content: ""
 	display: block
@@ -148,6 +209,19 @@ h3::after
 	background-size: contain
 	background-repeat: no-repeat
 	margin-left: 10px
+h3:hover:after
+	display: none
+h3:hover:before
+	content: ""
+	display: block
+	position: relative
+	background: url("../assets/svg/arrow.svg")
+	color: $orange
+	width: 60px
+	height: 30px
+	background-size: contain
+	background-repeat: no-repeat
+	margin-right: 10px
 h4
 	font-weight: 600
 	font-size: 32px
@@ -184,6 +258,9 @@ h4
 			@media (max-width: 1230px)
 				width: 23px
 				height: 19px
+.block__slogan-btn:hover
+	transform: scale(1.05)
+	transition-duration: 0.1s
 .slogan
 	width: 100vw
 	background-color: $wgrey
@@ -200,6 +277,7 @@ h4
 	box-sizing: border-box
 	margin: 0 auto
 	padding: 50px 100px 40px
+	color: $black
 	&-grid
 		display: flex
 		gap: 3vw
@@ -220,7 +298,7 @@ h4
 		box-shadow: 0px 4px 15px rgba(47, 51, 56, 0.1), 0px 4px 15px rgba(236, 106, 106, 0.2)
 		border-radius: 15px
 		text-align: center
-		transition: transform 1s
+		transition: transform 0.5s
 		transform-style: preserve-3d
 		img
 			margin-bottom: 20px
@@ -245,8 +323,22 @@ h4
 	font-size: 14px
 	font-weight: 600
 	padding: 20px 10px
-	color: $black
 	transform: rotateY(180deg)
+.detailed
+	color: $orange
+	margin-top: 10px
+	display: flex
+.detailed::after
+	content: ""
+	display: block
+	position: relative
+	background: url("../assets/svg/next.svg")
+	color: $orange
+	width: 16px
+	height: 16px
+	background-size: contain
+	background-repeat: no-repeat
+	margin-left: 5px
 .cases
 	&__block
 		max-width: 1440px
@@ -298,6 +390,10 @@ h4
 			font-size: 18px
 			line-height: 21px
 			max-width: 390px
+.cases__block-btn:hover
+	background-color: $orange
+	transform: scale(1.05)
+	transition-duration: 0.2s
 .cases__block-card:hover
 	transform: translateY(-20px)
 	transition-duration: 0.5s
@@ -333,6 +429,7 @@ h4
 		&-card
 			display: flex
 			flex-direction: column
+			justify-content: center
 			align-items: center
 			width: 285px
 			background: #FFFFFF
@@ -363,6 +460,24 @@ h4
 			font-size: 18px
 			line-height: 22px
 			text-align: center
+.about__block-leftcard.element-show
+	animation: wipe-enter 2s
+@keyframes wipe-enter
+	0%
+		opacity: 0
+		transform: translateX(-300px)
+	100%
+		opacity: 1
+		transform: translateX(0px)
+.about__block-rightcard.element-show
+	animation: wipe-right 2s
+@keyframes wipe-right
+	0%
+		opacity: 0
+		transform: translateX(300px)
+	100%
+		opacity: 1
+		transform: translateX(0px)
 #button-about
 	display: flex
 	align-items: center
@@ -375,6 +490,11 @@ h4
 	line-height: 28px
 	margin-top: 40px
 	height: 62px
+#button-about:hover
+	background: rgba(47, 51, 56)
+	color: $white
+	transform: scale(1.05)
+	transition-duration: 0.1s
 .trust
 	&__block
 		max-width: 1440px
@@ -453,10 +573,39 @@ h4
 			width: 380px
 			height: 350px
 			padding: 16px 33px
-.privilege__block-card:hover
-	transform: translateY(-20px)
-	transition-duration: 0.5s
-	cursor: default
+.contact__form
+	margin-top: 80px
+	background-image: url("../assets/bg/footer-bg.png")
+	background-size: cover
+	background-repeat: no-repeat
+	&-block
+		max-width: 1440px
+		box-sizing: border-box
+		margin: 0 auto
+		padding: 75px 100px 80px
+	&-title 
+		color: $orange
+		font-size: 64px
+		font-weight: 600
+		font-size: 64px
+.upload
+	position: absolute
+	opacity: 0
+	margin-top: 0px
+	width: 333px
+	height:51px
+	&-form
+		display: flex
+	&-button 
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		color: $wgrey
+		border: 2px dashed #FAFAFA
+		border-radius: 30px
+		width: 233px
+		height:51px
 .faq
 	&__block
 		max-width: 1440px
@@ -607,7 +756,13 @@ footer
 	line-height: 28px
 	margin-top: 30px
 	letter-spacing: 0.03em
-	height: 62px
+	height: 56px
+#button-footer:hover
+	background: $red
+	color: $white
+	border: 3px solid #F47E51
+	transform: scale(1.05)
+	transition-duration: 0.1s
 .hr-footer
 	max-width: 100vw
 	height: 0px
@@ -617,4 +772,3 @@ footer
 	text-decoration: underline
 .footer__block-link:hover
 	transform: scale(1.1)
-
