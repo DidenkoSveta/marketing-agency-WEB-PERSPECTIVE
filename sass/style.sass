@@ -161,6 +161,8 @@ h1
 	font-size: 48px
 	line-height: 57px
 	margin-bottom: 120px
+h1.element-show
+	animation: wipe-enter 1s
 h2
 	margin-bottom: 50px
 	font-weight: 700
@@ -175,6 +177,15 @@ h2
 		margin-bottom: 30px
 	span
 		color: $orange
+h2.element-show
+	animation: wipe-enter 1s
+@keyframes wipe-enter
+	0%
+		opacity: 0
+		transform: translateX(100px)
+	100%
+		opacity: 1
+		transform: translateX(0px)
 h3
 	white-space: nowrap
 	display: flex
@@ -183,6 +194,10 @@ h3
 	font-weight: 700
 	font-size: 26px
 	line-height: 54px
+	cursor: pointer
+h3:hover
+	transform: scale(1.01)
+	transition: 0.1s
 h3::after
 	content: ""
 	display: block
@@ -194,6 +209,19 @@ h3::after
 	background-size: contain
 	background-repeat: no-repeat
 	margin-left: 10px
+h3:hover:after
+	display: none
+h3:hover:before
+	content: ""
+	display: block
+	position: relative
+	background: url("../assets/svg/arrow.svg")
+	color: $orange
+	width: 60px
+	height: 30px
+	background-size: contain
+	background-repeat: no-repeat
+	margin-right: 10px
 h4
 	font-weight: 600
 	font-size: 32px
@@ -432,6 +460,24 @@ h4
 			font-size: 18px
 			line-height: 22px
 			text-align: center
+.about__block-leftcard.element-show
+	animation: wipe-enter 2s
+@keyframes wipe-enter
+	0%
+		opacity: 0
+		transform: translateX(-300px)
+	100%
+		opacity: 1
+		transform: translateX(0px)
+.about__block-rightcard.element-show
+	animation: wipe-right 2s
+@keyframes wipe-right
+	0%
+		opacity: 0
+		transform: translateX(300px)
+	100%
+		opacity: 1
+		transform: translateX(0px)
 #button-about
 	display: flex
 	align-items: center
@@ -527,10 +573,39 @@ h4
 			width: 380px
 			height: 350px
 			padding: 16px 33px
-.privilege__block-card:hover
-	transform: translateY(-20px)
-	transition-duration: 0.5s
-	cursor: default
+.contact__form
+	margin-top: 80px
+	background-image: url("../assets/bg/footer-bg.png")
+	background-size: cover
+	background-repeat: no-repeat
+	&-block
+		max-width: 1440px
+		box-sizing: border-box
+		margin: 0 auto
+		padding: 75px 100px 80px
+	&-title 
+		color: $orange
+		font-size: 64px
+		font-weight: 600
+		font-size: 64px
+.upload
+	position: absolute
+	opacity: 0
+	margin-top: 0px
+	width: 333px
+	height:51px
+	&-form
+		display: flex
+	&-button 
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		color: $wgrey
+		border: 2px dashed #FAFAFA
+		border-radius: 30px
+		width: 233px
+		height:51px
 .faq
 	&__block
 		max-width: 1440px
