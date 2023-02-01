@@ -12,9 +12,12 @@ $wgrey: #FAFAFA
 button
 	border-radius: 30px
 	height: 56px
-	font-size: 16px
-	@media (max-width: 1230px)
+	font-size: 18px
+	@media (max-width: 1439px)
+		font-size: 16px
+	@media (max-width: 1239px)
 		font-size: 15px
+		height: 51px
 body
 	background-color: $wgrey
 	width: 100vw
@@ -33,18 +36,20 @@ hr
 	height: 0px
 	border: 1px solid rgba(47, 51, 56, 0.3)
 	margin: 40px auto
-	@media (max-width: 1400px)
-		margin: 60px auto
-	@media (max-width: 1230px)
-		margin: 40px auto
+	@media (max-width: 1439px)
+		margin: 20px auto
+input
+	margin: 0
+	padding: 0
+input:autofill, input:autofill:focus, input:autofill:hover
+	transition: background-color 5000s ease-in-out 0s
+	-webkit-text-fill-color: $wgrey
 header
 	background-color: $wgrey
 	position: fixed
 	top: 0
 	z-index: 10
 	width: 100vw
-	@media (max-width: 1024px)
-		border-bottom: 1px solid rgba(244, 126, 81, 0.5)
 .header__block
 	margin: 0 auto
 	max-width: 1440px
@@ -54,12 +59,19 @@ header
 	justify-content: space-between
 	flex-wrap: wrap
 	padding: 0 100px
-	@media (max-width: 1230px)
+	@media (max-width: 1439px)
 		height: 90px
+		max-width: 1439px
+		padding: 0 80px
+	@media (max-width: 1239px)
+		max-width: 1240px
+		padding: 0 30px
 	&-lists
 		display: flex
 		justify-content: space-between
 		width: 540px
+		@media (max-width: 1239px)
+			width: 500px
 	&-list
 		font-style: normal
 		font-weight: 600
@@ -67,10 +79,17 @@ header
 		line-height: 28px
 		align-items: center
 		text-transform: uppercase
+		@media (max-width: 1239px)
+			font-size: 15px
 	&-logo
-		background-size: cover
+		background-size: contain
 		background-repeat: no-repeat
 		height: 36px
+		@media (max-width: 1239px)
+			height: 30px
+		img
+			@media (max-width: 1239px)
+				height: 30px
 .header__block-list:hover
 	text-decoration: underline
 	color: $orange
@@ -84,6 +103,9 @@ header
 	width: 22px
 	background-size: contain
 	background-repeat: no-repeat
+	@media (max-width: 1239px)
+		height: 8px
+		width: 19px
 .header__block-taplink
 	ul
 		display: none
@@ -94,6 +116,10 @@ header
 		padding: 15px
 		z-index: 11
 		background-color: $wgrey
+		@media (max-width: 1439px)
+			font-size: 16px
+		@media (max-width: 1239px)
+			font-size: 15px
 .header__block-taplink:hover
 	ul
 		display: flex
@@ -116,6 +142,10 @@ header
 	display: flex
 	justify-content: center
 	border: 3px solid #F47E51
+	@media (max-width: 1239px)
+		width: 170px
+		padding: 12px 22px
+		font-size: 15px
 .button__feedback:hover
 	box-sizing: border-box
 	background-color: $red
@@ -131,6 +161,10 @@ header
 	max-width: 800px
 	height: 960px
 	overflow: hidden
+	@media (max-width: 1439px)
+		height: 810px
+	@media (max-width: 1239px)
+		height: 690px
 .block__slider
 	display: flex
 	position: relative
@@ -141,26 +175,51 @@ header
 	animation-iteration-count: infinite
 	animation-timing-function: linear
 	margin-right: 40px
+	@media (max-width: 1439px)
+		margin-right: 110px
+	@media (max-width: 1239px)
+		margin-right: 170px
 	&-left
 		position: relative
 		top: 160px
+		@media (max-width: 1439px)
+			top: 180px
 	@keyframes slide
 		0%
-			transform: translateY(0)
+			transform: translateY(-150px)
 		100%
 			transform: translateY(-1000px)
 	&-card
 		display: flex
 		gap: 60px
 		flex-direction: column
+		@media (max-width: 1439px)
+			gap: 45px
+		@media (max-width: 1239px)
+			gap: 40px
 	img
 		height: 320px
 		width: 320px
+		@media (max-width: 1439px)
+			height: 280px
+			width: 280px
+		@media (max-width: 1239px)
+			height: 250px
+			width: 250px
 h1
 	font-weight: 700
 	font-size: 48px
 	line-height: 57px
 	margin-bottom: 120px
+	@media (max-width: 1439px)
+		font-size: 40px
+		line-height: 57px
+		margin-bottom: 110px
+	@media (max-width: 1239px)
+		font-size: 36px
+		line-height: 57px
+		margin-bottom: 80px
+		line-height: 37px
 h1.element-show
 	animation: wipe-enter 1s
 h2
@@ -168,13 +227,11 @@ h2
 	font-weight: 700
 	font-size: 48px
 	line-height: 57px
-	@media (max-width: 1400px)
+	@media (max-width: 1439px)
 		font-size: 40px
-	@media (max-width: 1230px)
+	@media (max-width: 1239px)
 		font-size: 36px
 		margin-bottom: 40px
-	@media (max-width: 1024px)
-		margin-bottom: 30px
 	span
 		color: $orange
 h2.element-show
@@ -195,6 +252,8 @@ h3
 	font-size: 26px
 	line-height: 54px
 	cursor: pointer
+	@media (max-width: 1239px)
+		font-size: 24px
 h3:hover
 	transform: scale(1.01)
 	transition: 0.1s
@@ -209,6 +268,9 @@ h3::after
 	background-size: contain
 	background-repeat: no-repeat
 	margin-left: 10px
+	@media (max-width: 1239px)
+		width: 30px
+		height: 15px
 h3:hover:after
 	display: none
 h3:hover:before
@@ -222,19 +284,29 @@ h3:hover:before
 	background-size: contain
 	background-repeat: no-repeat
 	margin-right: 10px
+	@media (max-width: 1239px)
+		width: 30px
+		height: 15px
 h4
 	font-weight: 600
 	font-size: 32px
 	line-height: 60px
+	@media (max-width: 1439px)
+		font-size: 24px
+		line-height: 40px
 .block__slogan
 	max-width: 590px
 	margin-top: 60px
+	@media (max-width: 1439px)
+		margin-top: 100px
 	&-btns
 		display: flex
 		margin-top: 120px
 		flex-wrap: wrap
 		justify-content: flex-start
 		align-items: center
+		@media (max-width: 1439px)
+			margin-top: 120px
 	&-btn
 		display: flex
 		width: 240px
@@ -246,18 +318,18 @@ h4
 		margin-left: 25px
 		align-items: center
 		justify-content: center
-		@media (max-width: 1400px)
+		@media (max-width: 1439px)
 			margin-left: 15px
-		@media (max-width: 1230px)
-			width: 220px
 			font-size: 15px
-			line-height: 25px
+		@media (max-width: 1239px)
+			width: 220px
+			margin-left: 11px
 		img
 			margin-right: 5px
 			margin: auto 5px
-			@media (max-width: 1230px)
-				width: 23px
+			@media (max-width: 1239px)
 				height: 19px
+				width: 23px
 .block__slogan-btn:hover
 	transform: scale(1.05)
 	transition-duration: 0.1s
@@ -271,6 +343,12 @@ h4
 		padding: 100px 100px 0px 100px
 		overflow: hidden
 		justify-content: space-between
+		@media (max-width: 1439px)
+			max-width: 1439px
+			padding: 100px 80px 0px 80px
+		@media (max-width: 1239px)
+			max-width: 1240px
+			padding: 80px 30px
 .service__block
 	max-width: 1440px
 	overflow-x: hidden
@@ -278,12 +356,20 @@ h4
 	margin: 0 auto
 	padding: 50px 100px 40px
 	color: $black
+	@media (max-width: 1439px)
+		max-width: 1439px
+		padding: 60px 80px 30px
+	@media (max-width: 1239px)
+		max-width: 1240px
+		padding: 0px 30px 30px
 	&-grid
 		display: flex
 		gap: 3vw
 		flex-wrap: wrap
 		justify-content: center
 		padding-bottom: 40px
+		@media (max-width: 1239px)
+			gap: 1vw
 	&-card
 		display: flex
 		flex-direction: column
@@ -346,6 +432,12 @@ h4
 		box-sizing: border-box
 		margin: 0 auto
 		padding: 10px 100px
+		@media (max-width: 1439px)
+			max-width: 1439px
+			padding: 0px 80px
+		@media (max-width: 1239px)
+			max-width: 1240px
+			padding: 0px 30px
 		&-btn
 			display: flex
 			justify-content: center
@@ -360,6 +452,13 @@ h4
 			width: 241px
 			margin: 0 auto
 			border-radius: 30px
+			@media (max-width: 1439px)
+				font-size: 16px
+				margin-top: 20px
+			@media (max-width: 1239px)
+				font-size: 15px
+				height: 51px
+				width: 215px
 		&-grid
 			display: flex
 			flex-wrap: wrap
@@ -371,28 +470,51 @@ h4
 			line-height: 21px
 			padding-bottom: 40px
 			margin-top: -30px
+			@media (max-width: 1439px)
+				font-size: 16px
 		&-card
 			width: 390px
 			height: 570px
+			@media (max-width: 1439px)
+				width: 330px
+				height: 480px
+			@media (max-width: 1239px)
+				width: 300px
+				height: 440px
 			img
 				height: 390px
 				width: 390px
 				background-size: contain
 				background-repeat: no-repeat
+				@media (max-width: 1439px)
+					height: 330px
+					width: 330px
+				@media (max-width: 1239px)
+					height: 300px
+					width: 300px
 		&-name
 			font-weight: 700
 			font-size: 18px
 			line-height: 21px
 			padding: 20px 0
 			max-width: 300px
+			@media (max-width: 1439px)
+				padding: 10px 0
+				font-size: 16px
+			@media (max-width: 1439px)
+				font-size: 15px
 		&-text
 			font-weight: 400
 			font-size: 18px
 			line-height: 21px
 			max-width: 390px
+			@media (max-width: 1439px)
+				font-size: 16px
+			@media (max-width: 1439px)
+				font-size: 15px
 .cases__block-btn:hover
 	background-color: $orange
-	transform: scale(1.05)
+	transform: scaleX(1.03)
 	transition-duration: 0.2s
 .cases__block-card:hover
 	transform: translateY(-20px)
@@ -402,6 +524,8 @@ h4
 	background-image: url("../assets/bg/grid-bg.png")
 	background-size: cover
 	background-repeat: no-repeat
+	@media (max-width: 1439px)
+		margin-top: 60px
 	&__block
 		display: flex
 		flex-wrap: wrap
@@ -410,38 +534,62 @@ h4
 		box-sizing: border-box
 		margin: 0 auto
 		padding: 80px 100px 80px
+		@media (max-width: 1439px)
+			max-width: 1440px
+			padding: 60px 80px 60px
+		@media (max-width: 1239px)
+			max-width: 1240px
+			padding: 40px 30px 40px
 		&-company
 			max-width: 550px
+			@media (max-width: 1439px)
+				max-width: 490px
+			@media (max-width: 1239px)
+				max-width: 420px
 		&-title
 			margin-bottom: 5px
 			span
 				color: $wgrey
 		&-subtitle
 			margin-bottom: 40px
+			@media (max-width: 1439px)
+				margin-bottom: 25px
 		&-text
 			font-weight: 600
 			font-size: 18px
 			line-height: 23px
+			@media (max-width: 1439px)
+				font-size: 16px
 		&-grid
 			display: flex
 			width: 600px
 			gap: 35px
+			@media (max-width: 1439px)
+				gap: 21px
+				width: 525px
 		&-card
 			display: flex
 			flex-direction: column
 			justify-content: center
 			align-items: center
-			width: 285px
 			background: #FFFFFF
 			box-shadow: 4px 4px 15px rgba(47, 51, 56, 0.3), 0px 4px 15px rgba(236, 106, 106, 0.2)
 			border-radius: 15px
 			padding: 30px 25px
+			@media (max-width: 1439px)
+				padding: 20px 15px
 		&-litlecard
 			height: 155px
 			width: 285px
+			@media (max-width: 1439px)
+				height: 137px
+				width: 250px
 		&-bigcard
-			height: 225px
+			height: 200px
 			width: 285px
+			@media (max-width: 1439px)
+				height: 155px
+				width: 250px
 		&-left
 			display: flex
 			flex-direction: column
@@ -460,6 +608,8 @@ h4
 			font-size: 18px
 			line-height: 22px
 			text-align: center
+			@media (max-width: 1439px)
+				font-size: 16px
 .about__block-leftcard.element-show
 	animation: wipe-enter 2s
 @keyframes wipe-enter
@@ -490,6 +640,14 @@ h4
 	line-height: 28px
 	margin-top: 40px
 	height: 62px
+	@media (max-width: 1439px)
+		font-size: 16px
+		height: 54px
+		margin-top: 30px
+	@media (max-width: 1239px)
+		font-size: 15px
+		height: 51px
+		margin-top: 30px
 #button-about:hover
 	background: rgba(47, 51, 56)
 	color: $white
@@ -501,6 +659,12 @@ h4
 		box-sizing: border-box
 		margin: 0 auto
 		padding: 80px 100px 40px
+		@media (max-width: 1439px)
+			max-width: 1439px
+			padding: 60px 80px 30px
+		@media (max-width: 1239px)
+			max-width: 1439px
+			padding: 50px 30px 15px
 		&-slider
 			display: flex
 			flex-direction: column
@@ -508,6 +672,8 @@ h4
 			max-width: 1240px
 			overflow: hidden
 			margin-bottom: 80px
+			@media (max-width: 1239px)
+				margin-bottom: 50px
 		&-slide
 			display: flex
 			gap: 25px
@@ -520,6 +686,9 @@ h4
 			min-width: 300px
 			padding: 30px
 			box-sizing: border-box
+			@media (max-width: 1239px)
+				height: 125px
+				min-width: 250px
 			img
 				display: block
 				background-size: contain
@@ -561,6 +730,12 @@ h4
 		box-sizing: border-box
 		margin: 0 auto
 		padding: 0px 100px 80px
+		@media (max-width: 1439px)
+			max-width: 1439px
+			padding: 0px 80px 40px
+		@media (max-width: 1239px)
+			max-width: 1240px
+			padding: 0px 30px 0px
 		&-grid
 			display: flex
 			flex-wrap: wrap
@@ -573,6 +748,21 @@ h4
 			width: 380px
 			height: 350px
 			padding: 16px 33px
+			@media (max-width: 1439px)
+				width: 330px
+				height: 330px
+			@media (max-width: 1239px)
+				width: 300px
+				height: 300px
+		&-img
+			@media (max-width: 1439px)
+				height: 60px
+				width: 60px
+				background-size: contain
+				background-repeat: no-repeat
+			@media (max-width: 1239px)
+				height: 50px
+				width: 50px
 .contact__form
 	margin-top: 80px
 	background-image: url("../assets/bg/footer-bg.png")
@@ -580,38 +770,108 @@ h4
 	background-repeat: no-repeat
 	&-block
 		max-width: 1440px
+		height: 800px
 		box-sizing: border-box
 		margin: 0 auto
-		padding: 75px 100px 80px
-	&-title 
+		padding: 75px 100px 150px
+		@media (max-width: 1439px)
+			max-width: 1439px
+			padding: 60px 80px 100px
+			height: 740px
+		@media (max-width: 1239px)
+			max-width: 1240px
+			padding: 60px 30px 50px
+			height: 670px
+	&-title
 		color: $orange
 		font-size: 64px
 		font-weight: 600
 		font-size: 64px
-.upload
-	position: absolute
-	opacity: 0
-	margin-top: 0px
-	width: 333px
-	height:51px
-	&-form
-		display: flex
-	&-button 
-		display: flex
-		flex-direction: column
-		align-items: center
-		justify-content: center
+		@media (max-width: 1439px)
+			font-size: 56px
+		@media (max-width: 1239px)
+			font-size: 48px
+	&-subtitle
+		font-weight: 400
+		font-size: 32px
+		line-height: 57px
 		color: $wgrey
-		border: 2px dashed #FAFAFA
-		border-radius: 30px
-		width: 233px
-		height:51px
+		padding: 35px 0
+		@media (max-width: 1439px)
+			font-size: 28px
+			line-height: 35px
+		@media (max-width: 1439px)
+			font-size: 24px
+			padding: 25px 0
+	&-grid
+		max-width: 1240px
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&-comment
+		margin-top: 80px
+		max-width: 1200px
+#contact-name, #contact-tel, #contact-site
+	border: none
+	border-bottom: 1px solid #FAFAFA
+	height: 62px
+	width: 330px
+	background: rgba(217, 217, 217, 0.001)
+	color: $wgrey
+	padding: 10px
+	font-weight: 300
+	font-size: 32px
+	line-height: 57px
+	@media (max-width: 1439px)
+		font-size: 28px
+		width: 290px
+	@media (max-width: 1239px)
+		font-size: 24px
+		width: 230px
+		height: 57px
+#subject
+	border: 1px solid #FAFAFA
+	min-height: 220px
+	max-height: 220px
+	min-width: 760px
+	max-width: 1200px
+	background: rgba(217, 217, 217, 0.001)
+	color: $wgrey
+	padding: 10px
+	font-weight: 300
+	font-size: 32px
+	line-height: 57px
+	margin: 60px 0
+	@media (max-width: 1439px)
+		font-size: 28px
+		min-height: 180px
+		max-height: 180px
+		min-width: 670px
+		max-width: 1050px
+	@media (max-width: 1239px)
+		font-size: 24px
+		min-height: 180px
+		max-height: 180px
+		min-width: 575px
+		max-width: 910px
+form
+	position: relative
+	max-width: 1440px
+	margin: 0 auto
+	@media (max-width: 1439px)
+		max-width: 1439px
 .faq
 	&__block
 		max-width: 1440px
 		box-sizing: border-box
 		margin: 0 auto
-		padding: 0px 100px 80px
+		padding: 80px 100px 80px
+		@media (max-width: 1439px)
+			max-width: 1439px
+			padding: 50px 80px 40px
+		@media (max-width: 1239px)
+			max-width: 1240px
+			padding: 50px 30px 20px
 		&-grid
 			display: flex
 			flex-wrap: wrap
@@ -620,19 +880,32 @@ h4
 			max-width: 1240px
 			margin: 0 auto
 			padding-bottom: 80px
+			@media (max-width: 1439px)
+				padding-bottom: 60px
+			@media (max-width: 1239px)
+				justify-content: center
+				padding-bottom: 50px
+				gap: 20px
 		&-card
 			width: 600px
+			@media (max-width: 1439px)
+				width: 520px
+			@media (max-width: 1239px)
+				width: 800px
 		&-panel
 			padding: 0 18px
 			display: none
 			background-color: white
 			overflow: hidden
+			@media (max-width: 1239px)
 		&-text
 			font-size: 18px
 			padding: 20px 1px
 			background: #FFFFFF
 			letter-spacing: 0.15px
 			line-height: 28px
+			@media (max-width: 1439px)
+				font-size: 16px
 			span
 				color: $orange
 .faq__block-btn
@@ -649,6 +922,12 @@ h4
 	font-size: 18px
 	transition: 0.4s
 	cursor: pointer
+	@media (max-width: 1439px)
+		width: 520px
+		height: 81px
+		font-size: 16px
+	@media (max-width: 1239px)
+		width: 800px
 .faq__block-btn::after
 	content: ""
 	display: block
@@ -660,6 +939,9 @@ h4
 	background-size: contain
 	background-repeat: no-repeat
 	margin-right: 10px
+	@media (max-width: 1439px)
+		width: 12px
+		height: 42px
 .active, #faq__block-btn:hover
 	background: #FFFFFF
 	transform: scale(1.02)
@@ -676,6 +958,12 @@ h4
 		box-sizing: border-box
 		margin: 0 auto
 		padding: 0px 100px 80px
+		@media (max-width: 1439px)
+			max-width: 1439px
+			padding: 0px 80px 60px
+		@media (max-width: 1239px)
+			max-width: 1239px
+			padding: 0px 30px 30px
 		&-grid
 			display: flex
 			flex-wrap: wrap
@@ -684,20 +972,37 @@ h4
 		&-card
 			height: 400px
 			width: 400px
+			@media (max-width: 1439px)
+				height: 314px
+				width: 330px
+			@media (max-width: 1239px)
+				height: 314px
+				width: 300px
 		&-img
 			height: 300px
 			width: 400px
 			background-size: contain
 			background-repeat: no-repeat
 			border-radius: 30px
+			@media (max-width: 1439px)
+				height: 247.5px
+				width: 330px
+				border-radius: 20px
+			@media (max-width: 1239px)
+				height: 225px
+				width: 300px
 		&-subtitle
 			font-weight: 700
 			font-size: 18px
 			line-height: 21px
+			@media (max-width: 1439px)
+				font-size: 16px
 		&-text
 			font-weight: 400
 			font-size: 18px
 			line-height: 21px
+			@media (max-width: 1439px)
+				font-size: 16px
 .articles__block-card:hover
 	transform: translateY(-20px) scale(1.01)
 	transition-duration: 0.5s
@@ -717,26 +1022,45 @@ footer
 	margin: 0 auto
 	padding: 60px 100px 80px
 	color: $wgrey
+	@media (max-width: 1439px)
+		max-width: 1439px
+		padding: 50px 80px 60px
+	@media (max-width: 1239px)
+		max-width: 1239px
+		padding: 50px 30px 40px
 	&-copyright
 		max-width: 1440px
 		box-sizing: border-box
 		margin: 0 auto
 		padding: 30px 100px
+		@media (max-width: 1439px)
+			padding: 30px 80px
+			max-width: 1439px
+		@media (max-width: 1239px)
+			padding: 30px 30px
+			max-width: 1239px
 	&-title
 		color: $wgrey
 		font-weight: 700
 		font-size: 20px
 		line-height: 24px
 		cursor: default
+		@media (max-width: 1439px)
+			font-size: 18px
+			line-height: 20px
 	&-list
 		color: $wgrey
 		font-weight: 300
 		font-size: 18px
 		line-height: 19px
+		@media (max-width: 1439px)
+			font-size: 16px
 	&-lists
 		display: flex
 		flex-direction: column
 		gap: 16px
+		@media (max-width: 1239px)
+			gap: 12px
 	&-contacts
 		display: flex
 		flex-direction: column
@@ -745,6 +1069,12 @@ footer
 		display: flex
 		justify-content: space-between
 		margin-top: 20px
+		@media (max-width: 1439px)
+			margin-top: 10px
+		a
+			img
+				@media (max-width: 1439px)
+					width: 45px
 #button-footer
 	display: flex
 	align-items: center
@@ -757,6 +1087,8 @@ footer
 	margin-top: 30px
 	letter-spacing: 0.03em
 	height: 56px
+	@media (max-width: 1439px)
+		font-size: 16px
 #button-footer:hover
 	background: $red
 	color: $white

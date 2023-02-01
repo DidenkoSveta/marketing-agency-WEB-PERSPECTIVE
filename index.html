@@ -365,24 +365,26 @@
       <section class="contact__form">
          <div class="contact__form-block">
             <div class="contact__form-title">Обсудим ваш проект</div>
+            <h5 class="contact__form-subtitle">Заполните форму, мы свяжемся с вами в ближайшее время</h5>
             <div class="container">
                <form action="action_page.php" enctype="multipart/form-data" method="post">
 
-                  <label for="cname"></label>
-                  <input type="text" id="contact-name" name="contactname" autocomplete="on" placeholder="Ваше имя">
+                  <div class="contact__form-grid">
+                     <input type="text" id="contact-name" name="contactname" autocomplete="on" placeholder="Ваше имя">
+                     <label for="contact-name"></label>
 
-                  <label for="ctel"></label>
-                  <input type="text" id="contact-tel" name="contacttel" autocomplete="on" placeholder="Номер телефона">
+                     <input type="text" id="contact-tel" name="contacttel" autocomplete="on"
+                        placeholder="Номер телефона">
+                     <label for="contact-tel"></label>
 
-                  <label for="csite"></label>
-                  <input type="text" id="contact-site" name="contactsite" autocomplete="on" placeholder="Адрес сайта">
-
-                  <input class="button__feedback" type="submit" value="Отправить" name="submitform">
-                  <div class="upload-form">
-                     <div class="upload-button">Прикрепить файл</div><input class="upload" required multiple type="file"
-                        name="contactfile" value="Прикрепить файл">
+                     <input type="text" id="contact-site" name="contactsite" autocomplete="on"
+                        placeholder="Адрес сайта">
+                     <label for="contact-site"></label>
                   </div>
-
+                     <textarea id="subject" name="subject" placeholder="Комментарий"></textarea>
+                     <label for="subject"></label>
+                     <input class="button__feedback button__contact" id="button__contact" type="submit"
+                        value="Отправить" name="submitform">
                </form>
             </div>
          </div>
