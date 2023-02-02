@@ -323,39 +323,51 @@
             <h5 class="cases__block-subtitle">Помогаем бизнесу и брендам достигать отличных результатов</h5>
             <div class="privilege__block-grid">
                <div class="privilege__block-card">
-                  <img src="assets/svg/privilege/privilege-1.svg" alt="privilege" class="privilege__block-img">
-                  <p class="cases__block-name">1. Индивидуальный подход</p>
+                  <div class="privilege__block-incard">
+                     <img src="assets/svg/privilege/privilege-1.svg" alt="privilege" class="privilege__block-img">
+                     <p class="cases__block-name">1. Индивидуальный подход</p>
+                  </div>
                   <p class="cases__block-text">Индивидуальный подход к каждому клиенту. Мы погружаемся в специфику
                      бизнеса клиента. Над проектом работает минимум 5 специалистов.</p>
                </div>
                <div class="privilege__block-card">
-                  <img src="assets/svg/privilege/privilege-2.svg" alt="privilege" class="privilege__block-img">
-                  <p class="cases__block-name">2. Работающие стратегии</p>
+                  <div class="privilege__block-incard">
+                     <img src="assets/svg/privilege/privilege-2.svg" alt="privilege" class="privilege__block-img">
+                     <p class="cases__block-name">2. Работающие стратегии</p>
+                  </div>
                   <p class="cases__block-text">Наш опыт продвижения сайтов в разных тематиках позволяет предложить вам
                      инструменты и стратегии, положительно зарекомендовавшие себя на практике.</p>
                </div>
                <div class="privilege__block-card">
-                  <img src="assets/svg/privilege/privilege-3.svg" alt="privilege" class="privilege__block-img">
-                  <p class="cases__block-name">3. Партнеры Google</p>
+                  <div class="privilege__block-incard">
+                     <img src="assets/svg/privilege/privilege-3.svg" alt="privilege" class="privilege__block-img">
+                     <p class="cases__block-name">3. Партнеры Google</p>
+                  </div>
                   <p class="cases__block-text">Официальные партнеры Google и Яндекса. Наши сотрудники являются
                      сертифицированными специалистами Google Ads, Google Analytics, Яндекс Директ, Яндекс Метрика.</p>
                </div>
                <div class="privilege__block-card">
-                  <img src="assets/svg/privilege/privilege-4.svg" alt="privilege" class="privilege__block-img">
-                  <p class="cases__block-name">4. Комплекс инструментов</p>
+                  <div class="privilege__block-incard">
+                     <img src="assets/svg/privilege/privilege-4.svg" alt="privilege" class="privilege__block-img">
+                     <p class="cases__block-name">4. Комплекс инструментов</p>
+                  </div>
                   <p class="cases__block-text">Комплексный подход при продвижении вашего сайта в интернете. Мы
                      предлагаем комплекс услуг для того, чтобы достичь максимального эффекта.</p>
                </div>
                <div class="privilege__block-card">
-                  <img src="assets/svg/privilege/privilege-5.svg" alt="privilege" class="privilege__block-img">
-                  <p class="cases__block-name">5. Веб-аналитика</p>
+                  <div class="privilege__block-incard">
+                     <img src="assets/svg/privilege/privilege-5.svg" alt="privilege" class="privilege__block-img">
+                     <p class="cases__block-name">5. Веб-аналитика</p>
+                  </div>
                   <p class="cases__block-text">Аналитика - это наше второе "Я". Наш высокий уровень владения
                      инструментами веб-аналитики позволяет принимать оптимальные решения для увеличения прибыли вашего
                      бизнеса.</p>
                </div>
                <div class="privilege__block-card">
-                  <img src="assets/svg/privilege/privilege-6.svg" alt="privilege" class="privilege__block-img">
-                  <p class="cases__block-name">6. Эксперты в маркетинге</p>
+                  <div class="privilege__block-incard">
+                     <img src="assets/svg/privilege/privilege-6.svg" alt="privilege" class="privilege__block-img">
+                     <p class="cases__block-name">6. Эксперты в маркетинге</p>
+                  </div>
                   <p class="cases__block-text">Эксперты в области интернет-маркетинга. Мы пишем профильные статьи и
                      кейсы, участвуем в конференциях по digital marketing.</p>
                </div>
@@ -364,8 +376,10 @@
       </section>
       <section class="contact__form">
          <div class="contact__form-block">
-            <div class="contact__form-title">Обсудим ваш проект</div>
-            <h5 class="contact__form-subtitle">Заполните форму, мы свяжемся с вами в ближайшее время</h5>
+            <div class="contact__form-intitle">
+               <div class="contact__form-title">Обсудим ваш проект</div>
+               <h5 class="contact__form-subtitle">Заполните форму, мы свяжемся с вами в ближайшее время</h5>
+            </div>
             <div class="container">
                <form action="action_page.php" enctype="multipart/form-data" method="post">
 
@@ -381,10 +395,10 @@
                         placeholder="Адрес сайта">
                      <label for="contact-site"></label>
                   </div>
-                     <textarea id="subject" name="subject" placeholder="Комментарий"></textarea>
-                     <label for="subject"></label>
-                     <input class="button__feedback button__contact" id="button__contact" type="submit"
-                        value="Отправить" name="submitform">
+                  <textarea id="subject" name="subject" placeholder="Комментарий"></textarea>
+                  <label for="subject"></label>
+                  <input class="button__feedback button__contact" id="button__contact" type="submit" value="Отправить"
+                     name="submitform">
                </form>
             </div>
          </div>
@@ -544,18 +558,25 @@
             <div class="articles__block-grid">
                <div class="articles__block-card">
                   <img src="assets/img/articles/articles-1.png" alt="articles" class="articles__block-img">
-                  <p class="articles__block-subtitle">Как UI дизайн помогает настроить на покупку</p>
-                  <p class="articles__block-text">12 дней назад</p>
+                  <div class="articles__block-incard">
+                     <p class="articles__block-subtitle">Как UI дизайн помогает настроить на покупку</p>
+                     <p class="articles__block-text">12 дней назад</p>
+                  </div>
                </div>
                <div class="articles__block-card">
                   <img src="assets/img/articles/articles-2.png" alt="articles" class="articles__block-img">
-                  <p class="articles__block-subtitle">Топ 15 SEO расширений для Chrome</p>
-                  <p class="articles__block-text">12 дней назад</p>
+                  <div class="articles__block-incard">
+                     <p class="articles__block-subtitle">Топ 15 SEO расширений для Chrome</p>
+                     <p class="articles__block-text">12 дней назад</p>
+                  </div>
+
                </div>
                <div class="articles__block-card">
                   <img src="assets/img/articles/articles-3.png" alt="articles" class="articles__block-img">
-                  <p class="articles__block-subtitle">Увеличение лидов, через SEO</p>
-                  <p class="articles__block-text">12 дней назад</p>
+                  <div class="articles__block-incard">
+                     <p class="articles__block-subtitle">Увеличение лидов, через SEO</p>
+                     <p class="articles__block-text">12 дней назад</p>
+                  </div>
                </div>
             </div>
          </div>
@@ -568,7 +589,7 @@
                   alt="logo"></a>
             <a class="button__feedback button__feedback-header" id="button-footer" href="#">Обсудить проект</a>
          </div>
-         <nav class="navigation__footer">
+         <nav class="navigation__footer footer__block-service">
             <ul class="footer__block-lists">
                <li><a class="footer__block-title" href="#">Услуги</a></li>
                <li class="footer__block-change"><a class="footer__block-list" href="#">Контекстная реклама</a></li>
@@ -582,7 +603,7 @@
                <li><a class="footer__block-list" href="#">Email маркетинг</a></li>
             </ul>
          </nav>
-         <nav class="navigation__footer">
+         <nav class="navigation__footer footer__block-navigation">
             <ul class="footer__block-lists">
                <li><a class="footer__block-title" href="#">Навигация</a></li>
                <li><a class="footer__block-list" href="#">Главная</a></li>
