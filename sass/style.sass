@@ -74,6 +74,9 @@ header
 	@media (max-width: 740px)
 		max-width: 740px
 		height: 80px
+	@media (max-width: 380px)
+		max-width: 3800px
+		height: 70px
 	&-lists
 		display: flex
 		justify-content: space-between
@@ -208,6 +211,9 @@ header
 	@media (max-width: 1024px)
 		order: 3
 		display: block
+	@media (max-width: 380px)
+		width: 50px
+		height: 32px
 .burger:hover
 	cursor: pointer
 .close
@@ -285,6 +291,18 @@ header
 			transform: translateY(-150px)
 		100%
 			transform: translateY(-1000px)
+	@media (max-width: 740px)
+		@keyframes slide
+			0%
+				transform: translateY(-50px)
+			100%
+				transform: translateY(-800px)
+	@media (max-width: 380px)
+		@keyframes slide
+			0%
+				transform: translateY(-50px)
+			100%
+				transform: translateY(-600px)
 	&-card
 		display: flex
 		gap: 60px
@@ -312,6 +330,9 @@ header
 		@media (max-width: 740px)
 			height: 170px
 			width: 170px
+		@media (max-width: 380px)
+			height: 135px
+			width: 135px
 h1
 	font-weight: 700
 	font-size: 48px
@@ -348,6 +369,7 @@ h2
 	@media (max-width: 740px)
 		margin-bottom: 20px
 		margin-top: -10px
+		line-height: 40px
 	span
 		color: $orange
 h2.element-show
@@ -556,11 +578,12 @@ h4
 		transition: transform 0.5s
 		transform-style: preserve-3d
 		@media (max-width: 740px)
+			display: flex
 			align-items: flex-start
 			justify-content: center
-			padding: 5px 10px
+			padding: 10px 10px
 			width: 100%
-			height: 60px
+			height: 80px
 		img
 			margin-bottom: 20px
 			height: 50px
@@ -572,8 +595,6 @@ h4
 .service__block-card:hover
 	transform: rotateY(180deg)
 	cursor: pointer
-	@media (max-width: 740px)
-		transform: rotateY(0deg)
 .card-face
 	display: flex
 	flex-direction: column
@@ -595,10 +616,15 @@ h4
 	transform: rotateY(180deg)
 	@media (max-width: 740px)
 		flex-direction: row
+		text-align: center
+		display: flex
+		justify-content: center
 .detailed
 	color: $orange
 	margin-top: 10px
 	display: flex
+	@media (max-width: 740px)
+		display: none
 .detailed::after
 	content: ""
 	display: block
@@ -628,6 +654,8 @@ h4
 			padding: 0px 20px
 		@media (max-width: 740px)
 			max-width: 740px
+		@media (max-width: 380px)
+			max-width: 380px
 		&-btn
 			display: flex
 			justify-content: center
@@ -667,6 +695,8 @@ h4
 			@media (max-width: 1439px)
 				font-size: 16px
 				padding-bottom: 20px
+			@media (max-width: 380px)
+				padding-top: 15px
 		&-card
 			width: 390px
 			height: 570px
@@ -679,6 +709,9 @@ h4
 			@media (max-width: 1024px)
 				width: 330px
 				height: 470px
+			@media (max-width: 380px)
+				width: 295px
+				height: 390px
 			img
 				height: 390px
 				width: 390px
@@ -693,6 +726,9 @@ h4
 				@media (max-width: 1024px)
 					height: 330px
 					width: 330px
+				@media (max-width: 380px)
+					height: 290px
+					width: 290px
 		&-name
 			font-weight: 700
 			font-size: 18px
@@ -704,6 +740,10 @@ h4
 				font-size: 16px
 			@media (max-width: 1439px)
 				font-size: 15px
+			@media (max-width: 380px)
+				font-size: 14px
+				padding: 7px 0
+				line-height: 14px
 		&-text
 			font-weight: 400
 			font-size: 18px
@@ -713,6 +753,9 @@ h4
 				font-size: 16px
 			@media (max-width: 1239px)
 				font-size: 15px
+			@media (max-width: 380px)
+				font-size: 14px
+				line-height: 14px
 .cases__block-btn:hover
 	background-color: $orange
 	transform: scaleX(1.03)
@@ -1213,6 +1256,9 @@ form
 				gap: 20px
 			@media (max-width: 1024px)
 				padding-bottom: 30px
+			@media (max-width: 740px)
+				gap: 10px
+				padding-bottom: 20px
 		&-card
 			width: 600px
 			@media (max-width: 1439px)
@@ -1266,6 +1312,8 @@ form
 		text-align: left
 		line-height: 20px
 		padding: 0px 20px
+		height: 70px
+		font-size: 14px
 .faq__block-btn::after
 	content: ""
 	display: block
@@ -1282,6 +1330,11 @@ form
 		height: 42px
 	@media (max-width: 740px)
 		margin-right: 0px
+	@media (max-width: 380px)
+		margin-left: 10px
+		width: 12px
+		height: 42px!important
+		background-size: contain
 .active, #faq__block-btn:hover
 	background: #FFFFFF
 	transform: scale(1.02)
@@ -1309,6 +1362,8 @@ form
 			padding: 0px 20px 30px
 		@media (max-width: 740px)
 			max-width: 740px
+		@media (max-width: 380px)
+			max-width: 380px
 		&-grid
 			display: flex
 			flex-wrap: wrap
@@ -1333,6 +1388,11 @@ form
 				width: 100%
 				display: flex
 				gap: 10px
+			@media (max-width: 380px)
+				height: 100px
+				width: 100%
+				display: flex
+				gap: 10px
 		&-img
 			height: 300px
 			width: 400px
@@ -1349,7 +1409,9 @@ form
 			@media (max-width: 1024px)
 				height: 150px
 				width: 200px
-			@media (max-width: 740px)
+			@media (max-width: 380px)
+				height: 100px
+				width: 150px
 		&-subtitle
 			font-weight: 700
 			font-size: 18px
@@ -1358,12 +1420,16 @@ form
 				font-size: 16px
 			@media (max-width: 1024px)
 				font-size: 15px
+			@media (max-width: 380px)
+				font-size: 14px
 		&-text
 			font-weight: 400
 			font-size: 18px
 			line-height: 21px
 			@media (max-width: 1439px)
 				font-size: 16px
+			@media (max-width: 380px)
+				font-size: 14px
 .articles__block-card:hover
 	transform: translateY(-20px) scale(1.01)
 	transition-duration: 0.5s
@@ -1396,9 +1462,15 @@ footer
 	@media (max-width: 740px)
 		max-width: 740px
 		margin-bottom: 80px
+	@media (max-width: 380px)
+		max-width: 380px
+		margin-bottom: 0px
+		justify-content: center
 	&-navigation
 		@media (max-width: 740px)
-		margin-top: 10px
+			margin-top: 10px
+		@media (max-width: 380px)
+			display: none
 	&-service
 		@media (max-width: 740px)
 			display: none
@@ -1419,10 +1491,14 @@ footer
 			font-size: 15px
 		@media (max-width: 740px)
 			max-width: 740px
-			padding: 20px
+			padding: 20px 20px 30px
 			font-weight: 350
 			font-size: 14px
 			line-height: 19px
+		p
+			@media (max-width: 380px)
+				text-align: center
+
 	&-title
 		color: $wgrey
 		font-weight: 700
@@ -1459,6 +1535,10 @@ footer
 		@media (max-width: 1024px)
 			position: absolute
 			margin-top: 160px
+		@media (max-width: 380px)
+			position: relative
+			margin-top: 30px
+			align-items: center
 	&-social
 		display: flex
 		justify-content: space-between
@@ -1467,6 +1547,8 @@ footer
 			margin-top: 10px
 		@media (max-width: 740px)
 			margin-top: 0px
+		@media (max-width: 380px)
+			width: 55vw
 		a
 			img
 				@media (max-width: 1439px)
