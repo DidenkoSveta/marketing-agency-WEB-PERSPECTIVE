@@ -2662,8 +2662,10 @@ footer {
     margin-bottom: 80px;
   }
 }
-.footer__block-navigation {
-  margin-top: 10px;
+@media (max-width: 740px) {
+  .footer__block-navigation {
+    margin-top: 10px;
+  }
 }
 @media (max-width: 740px) {
   .footer__block-service {
@@ -2699,7 +2701,7 @@ footer {
 @media (max-width: 740px) {
   .footer__block-copyright {
     max-width: 740px;
-    padding: 20px;
+    padding: 20px 20px 30px;
     font-weight: 350;
     font-size: 14px;
     line-height: 19px;
