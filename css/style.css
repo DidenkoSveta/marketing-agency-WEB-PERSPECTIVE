@@ -3045,4 +3045,40 @@ footer {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.subheader__block {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 120px 100px 50px;
+}
+.subheader__block-title {
+  margin: 40px 0px;
+}
+.subheader__block-subtitle {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 54px;
+}
+.subheader__block-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.subheader__block-card {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 15px rgba(47, 51, 56, 0.1), 0px 4px 15px rgba(236, 106, 106, 0.2);
+          box-shadow: 0px 4px 15px rgba(47, 51, 56, 0.1), 0px 4px 15px rgba(236, 106, 106, 0.2);
+  border-radius: 15px;
+  width: 380px;
+  height: 140px;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }/*# sourceMappingURL=style.css.map */

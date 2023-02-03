@@ -47,7 +47,7 @@
       </div>
    </header>
    <main>
-      <section class="slogan">
+      <!-- <section class="slogan">
          <div class="slogan__block">
             <div class="block__slogan-background">
                <div class="block__slogan">
@@ -84,8 +84,71 @@
                </div>
             </div>
          </div>
+      </section> -->
+      <section class="subheader">
+         <div class="subheader__block">
+            <h1 class="subheader__block-title">Контакты интернет-агентства</h1>
+            <div class="subheader__block-subtitle">Ответим на все интересующие Вас вопросы по телефону или по e-mail
+            </div>
+            <div class="subheader__block-form">
+               <div class="subheader__block-grid">
+                  <div class="subheader__block-card"><img src="assets/svg/contacts/tel.svg" alt="phone">
+                     <div class="subheader__block-incard">
+                        <p>Телефон</p>
+                        <p>+7(999)-113-10-45</p>
+                     </div>
+                  </div>
+                  <div class="subheader__block-card"><img src="assets/svg/contacts/mail.svg" alt="email">
+                     <div class="subheader__block-incard">
+                        <p>Email</p>
+                        <p>sales@webperspective.ru</p>
+                     </div>
+
+                  </div>
+                  <div class="subheader__block-card"><img src="assets/svg/contacts/time.svg" alt="time">
+                     <div class="subheader__block-incard">
+                        <p>Время работы:</p>
+                        <p>пн. - пт. с 9:00 до 18:00 ч.</p>
+                     </div>
+                  </div>
+                  <div class="subheader__block-card"><img src="assets/svg/contacts/mess.svg" alt="messengers">
+                     <div class="subheader__block-incard">
+                        <p>Мессенджеры</p>
+                        <div class="messengers">
+                           <img src="assets/svg/contacts/whatsap.svg" alt="whatsap">
+                           <img src="assets/svg/contacts/telegram.svg" alt="telegram">
+                           <img src="assets/svg/contacts/viber.svg" alt="viber">
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+               <div class="subheader__block-container">
+                  <form action="action_page.php" enctype="multipart/form-data" method="post">
+
+                     <div class="subheader__form-grid">
+                        <input type="text" id="subheader-name" name="contactname" autocomplete="on"
+                           placeholder="Ваше имя">
+                        <label for="contact-name"></label>
+
+                        <input type="text" id="subheader-tel" name="contacttel" autocomplete="on"
+                           placeholder="Номер телефона">
+                        <label for="contact-tel"></label>
+
+                        <input type="text" id="subheader-site" name="contactsite" autocomplete="on"
+                           placeholder="Адрес сайта">
+                        <label for="contact-site"></label>
+                     </div>
+                     <textarea id="subheader-subject" name="subject" placeholder="Комментарий"></textarea>
+                     <label for="subheader-subject"></label>
+                     <input class="button__feedback button__contact" id="button__contact" type="submit"
+                        value="Отправить" name="submitform">
+                  </form>
+               </div>
+            </div>
+         </div>
       </section>
-      
+
       <section class="trust">
          <div class="trust__block">
             <h2>Нам<span> Доверяют</span></h2>
@@ -147,60 +210,61 @@
                         class="grayscale"></div>
                </div>
             </div>
+
          </div>
       </section>
-      </main>
-      <footer>
-         <div class="footer__block">
-            <div class="footer-block-name">
-               <a class="footer__block-logo" id="footer-logo" href="#"><img src="assets/svg/footer-logo.svg"
-                     alt="logo"></a>
-               <a class="button__feedback button__feedback-header" id="button-footer" href="#">Обсудить проект</a>
-            </div>
-            <nav class="navigation__footer footer__block-service">
-               <ul class="footer__block-lists">
-                  <li><a class="footer__block-title" href="#">Услуги</a></li>
-                  <li class="footer__block-change"><a class="footer__block-list" href="#">Контекстная реклама</a></li>
-                  <li><a class="footer__block-list" href="#">SEO продвижение</a></li>
-                  <li><a class="footer__block-list" href="#">Создание сайтов</a></li>
-                  <li><a class="footer__block-list" href="#">Таргетированная реклама</a></li>
-                  <li><a class="footer__block-list" href="#">Внедрение CRM</a></li>
-                  <li><a class="footer__block-list" href="#">Индивидуальный стиль</a></li>
-                  <li><a class="footer__block-list" href="#">Реклама на маркетплейсах</a></li>
-                  <li><a class="footer__block-list" href="#">Холодные звонки</a></li>
-                  <li><a class="footer__block-list" href="#">Email маркетинг</a></li>
-               </ul>
-            </nav>
-            <nav class="navigation__footer footer__block-navigation">
-               <ul class="footer__block-lists">
-                  <li><a class="footer__block-title" href="#">Навигация</a></li>
-                  <li><a class="footer__block-list" href="index.html">Главная</a></li>
-                  <li><a class="footer__block-list" href="#">Услуги</a></li>
-                  <li><a class="footer__block-list" href="#">Стоимость</a></li>
-                  <li><a class="footer__block-list" href="#">Кейсы</a></li>
-                  <li><a class="footer__block-list" href="#">Блог</a></li>
-                  <li><a class="footer__block-list" href="#">Контакты</a></li>
-               </ul>
-            </nav>
-            <div class="footer__block-contacts">
-               <a href="#" class="footer__block-title">Контакты</a>
-               <a href="#" class="footer__block-list">+7(999)-113-10-45</a>
-               <a href="#" class="footer__block-list">sales@webperspective.ru</a>
-               <div class="footer__block-social">
-                  <a href="#" class="footer__block-link"><img src="assets/svg/social/whatsapp.svg" alt="whatsapp"></a>
-                  <a href="#" class="footer__block-link"><img src="assets/svg/social/telegram.svg" alt="telegram"></a>
-                  <a href="#" class="footer__block-link"><img src="assets/svg/social/viber.svg" alt="viber"></a>
-               </div>
+   </main>
+   <footer>
+      <div class="footer__block">
+         <div class="footer-block-name">
+            <a class="footer__block-logo" id="footer-logo" href="#"><img src="assets/svg/footer-logo.svg"
+                  alt="logo"></a>
+            <a class="button__feedback button__feedback-header" id="button-footer" href="#">Обсудить проект</a>
+         </div>
+         <nav class="navigation__footer footer__block-service">
+            <ul class="footer__block-lists">
+               <li><a class="footer__block-title" href="#">Услуги</a></li>
+               <li class="footer__block-change"><a class="footer__block-list" href="#">Контекстная реклама</a></li>
+               <li><a class="footer__block-list" href="#">SEO продвижение</a></li>
+               <li><a class="footer__block-list" href="#">Создание сайтов</a></li>
+               <li><a class="footer__block-list" href="#">Таргетированная реклама</a></li>
+               <li><a class="footer__block-list" href="#">Внедрение CRM</a></li>
+               <li><a class="footer__block-list" href="#">Индивидуальный стиль</a></li>
+               <li><a class="footer__block-list" href="#">Реклама на маркетплейсах</a></li>
+               <li><a class="footer__block-list" href="#">Холодные звонки</a></li>
+               <li><a class="footer__block-list" href="#">Email маркетинг</a></li>
+            </ul>
+         </nav>
+         <nav class="navigation__footer footer__block-navigation">
+            <ul class="footer__block-lists">
+               <li><a class="footer__block-title" href="#">Навигация</a></li>
+               <li><a class="footer__block-list" href="index.html">Главная</a></li>
+               <li><a class="footer__block-list" href="#">Услуги</a></li>
+               <li><a class="footer__block-list" href="#">Стоимость</a></li>
+               <li><a class="footer__block-list" href="#">Кейсы</a></li>
+               <li><a class="footer__block-list" href="#">Блог</a></li>
+               <li><a class="footer__block-list" href="#">Контакты</a></li>
+            </ul>
+         </nav>
+         <div class="footer__block-contacts">
+            <a href="#" class="footer__block-title">Контакты</a>
+            <a href="#" class="footer__block-list">+7(999)-113-10-45</a>
+            <a href="#" class="footer__block-list">sales@webperspective.ru</a>
+            <div class="footer__block-social">
+               <a href="#" class="footer__block-link"><img src="assets/svg/social/whatsapp.svg" alt="whatsapp"></a>
+               <a href="#" class="footer__block-link"><img src="assets/svg/social/telegram.svg" alt="telegram"></a>
+               <a href="#" class="footer__block-link"><img src="assets/svg/social/viber.svg" alt="viber"></a>
             </div>
          </div>
-         <hr class="hr-footer">
-         <div class="footer__block-copyright">
-            <p>&copy; 2023 «WEB PERSPECTIVE». Все права защищены</p>
-         </div>
-   
-      </footer>
-      <script src="js/burger.js"></script>
-      <script src="js/animate.js"></script>
-   </body>
-   
-   </html>
+      </div>
+      <hr class="hr-footer">
+      <div class="footer__block-copyright">
+         <p>&copy; 2023 «WEB PERSPECTIVE». Все права защищены</p>
+      </div>
+
+   </footer>
+   <script src="js/burger.js"></script>
+   <script src="js/animate.js"></script>
+</body>
+
+</html>
