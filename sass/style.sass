@@ -1372,16 +1372,16 @@ form
 			@media (max-width: 740px)
 				gap: 15px
 		&-card
-			height: 400px
+			height: 430px
 			width: 400px
 			@media (max-width: 1439px)
-				height: 314px
+				height: 324px
 				width: 330px
 			@media (max-width: 1239px)
-				height: 314px
+				height: 344px
 				width: 300px
 			@media (max-width: 1024px)
-				height: 230px
+				height: 260px
 				width: 200px
 			@media (max-width: 740px)
 				height: 150px
@@ -1399,6 +1399,7 @@ form
 			background-size: contain
 			background-repeat: no-repeat
 			border-radius: 30px
+			margin-bottom: 10px
 			@media (max-width: 1439px)
 				height: 247.5px
 				width: 330px
@@ -1407,6 +1408,7 @@ form
 				height: 225px
 				width: 300px
 			@media (max-width: 1024px)
+				margin-bottom: 5px
 				height: 150px
 				width: 200px
 			@media (max-width: 380px)
@@ -1415,7 +1417,7 @@ form
 		&-subtitle
 			font-weight: 700
 			font-size: 18px
-			line-height: 21px
+			line-height: 30px
 			@media (max-width: 1439px)
 				font-size: 16px
 			@media (max-width: 1024px)
@@ -1425,7 +1427,7 @@ form
 		&-text
 			font-weight: 400
 			font-size: 18px
-			line-height: 21px
+			line-height: 30px
 			@media (max-width: 1439px)
 				font-size: 16px
 			@media (max-width: 380px)
@@ -1790,3 +1792,64 @@ footer
 #button__subheader
 	@media (max-width: 380px)
 		margin: 0 auto
+.publication
+	&__block
+		max-width: 1440px
+		box-sizing: border-box
+		margin: 0 auto
+		padding: 140px 100px 20px
+		&-sorting
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-evenly
+		&-link 
+			display: inline-block
+			padding: 8px 20px
+			margin: 10px
+			border: 1px solid #2F3338
+			border-radius: 30px
+			font-weight: 400
+			font-size: 18px
+		&-link:hover
+			color: $wgrey
+			background: $black
+		&-link:active
+			color: $wgrey
+			background: $black
+		&-title
+			text-align: center
+			margin: 30px auto
+		&-subtitle
+			text-align: center
+			font-weight: 400
+			font-size: 18px
+			line-height: 24px
+		&-text
+			font-weight: 400
+			font-size: 18px
+			line-height: 24px
+			max-width: 504px
+		&-subscription
+			display: flex
+			flex-wrap: wrap
+			position: relative
+			margin: 50px 0px
+			img
+				position: absolute
+				right: 105px
+				top: -54px
+		&-example
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			width: 518px
+			background: #F1F0F0
+			border: 2px solid rgba(47, 51, 56, 0.5)
+			border-radius: 40px
+			padding: 8px 20px 8px 30px
+			font-weight: 300
+			font-size: 18px
+			line-height: 24px
+		&-input
+			border: none
+			background: #F1F0F0
