@@ -1372,24 +1372,24 @@ form
 			@media (max-width: 740px)
 				gap: 15px
 		&-card
-			height: 400px
+			height: 430px
 			width: 400px
 			@media (max-width: 1439px)
-				height: 314px
+				height: 324px
 				width: 330px
 			@media (max-width: 1239px)
-				height: 314px
+				height: 344px
 				width: 300px
 			@media (max-width: 1024px)
-				height: 230px
+				height: 260px
 				width: 200px
 			@media (max-width: 740px)
-				height: 150px
+				height: 110px
 				width: 100%
 				display: flex
 				gap: 10px
 			@media (max-width: 380px)
-				height: 100px
+				height: 110px
 				width: 100%
 				display: flex
 				gap: 10px
@@ -1399,6 +1399,7 @@ form
 			background-size: contain
 			background-repeat: no-repeat
 			border-radius: 30px
+			margin-bottom: 10px
 			@media (max-width: 1439px)
 				height: 247.5px
 				width: 330px
@@ -1407,28 +1408,36 @@ form
 				height: 225px
 				width: 300px
 			@media (max-width: 1024px)
+				margin-bottom: 5px
 				height: 150px
 				width: 200px
+			@media (max-width: 740px)
+				height: 100px
+				width: 150px
 			@media (max-width: 380px)
 				height: 100px
 				width: 150px
 		&-subtitle
 			font-weight: 700
 			font-size: 18px
-			line-height: 21px
+			line-height: 30px
 			@media (max-width: 1439px)
 				font-size: 16px
 			@media (max-width: 1024px)
 				font-size: 15px
+			@media (max-width: 740px)
+				font-weight: 500
+				line-height: 22px
 			@media (max-width: 380px)
 				font-size: 14px
 		&-text
 			font-weight: 400
 			font-size: 18px
-			line-height: 21px
+			line-height: 30px
 			@media (max-width: 1439px)
 				font-size: 16px
-			@media (max-width: 380px)
+			@media (max-width: 740px)
+				font-weight: 300
 				font-size: 14px
 .articles__block-card:hover
 	transform: translateY(-20px) scale(1.01)
@@ -1696,7 +1705,6 @@ footer
 			@media (max-width: 1439px)
 				width: 360px
 				padding: 0px 30px 20px
-			@media (max-width: 1239px)
 				width: 340px
 			@media (max-width: 1024px)
 				width: 300px
@@ -1790,3 +1798,171 @@ footer
 #button__subheader
 	@media (max-width: 380px)
 		margin: 0 auto
+.publication
+	&__block
+		max-width: 1440px
+		box-sizing: border-box
+		margin: 0 auto
+		padding: 140px 100px 20px
+		@media (max-width: 1239px)
+			max-width: 1240px
+			padding: 100px 30px 60px
+		@media (max-width: 1024px)
+			max-width: 1024px
+			padding: 80px 20px 30px
+		@media (max-width: 740px)
+			max-width: 740px
+			padding: 60px 20px 30px
+		@media (max-width: 380px)
+			max-width: 380px
+		&-sorting
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-evenly
+			@media (max-width: 1024px)
+				justify-content: center
+		&-link
+			display: inline-block
+			padding: 8px 20px
+			margin: 10px 0px
+			border: 1px solid #2F3338
+			border-radius: 30px
+			font-weight: 400
+			font-size: 18px
+			@media (max-width: 1439px)
+				padding: 8px 20px
+				margin: 5px 0px
+			@media (max-width: 1239px)
+				font-size: 16px
+			@media (max-width: 1024px)
+				margin: 5px 5px
+			@media (max-width: 740px)
+				margin: 5px 7px
+				font-size: 15px
+				padding: 0px 0px
+				font-weight: 400
+				border: none
+				display: flex
+				flex-direction: row
+				color: $orange
+		&-link:before
+			@media (max-width: 740px)
+				content: '\0023'
+				display: block
+				position: relative
+				color: $orange
+				margin-right: 3px
+		&-link:hover
+			color: $wgrey
+			background: $black
+			transition-duration: 0.1s
+			@media (max-width: 740px)
+				color: black
+				background: $wgrey
+		&-link:active
+			color: $wgrey
+			background: $black
+			@media (max-width: 740px)
+				color: black
+				background: $wgrey
+		&-title
+			text-align: center
+			margin: 30px auto
+		&-subtitle
+			text-align: center
+			font-weight: 400
+			font-size: 18px
+			line-height: 24px
+			@media (max-width: 740px)
+				font-size: 16px
+				br
+					display: none
+		&-text
+			font-weight: 400
+			font-size: 18px
+			line-height: 24px
+			max-width: 504px
+			@media (max-width: 1239px)
+				font-size: 16px
+				max-width: 400px
+			@media (max-width: 1024px)
+				margin-bottom: 20px
+				text-align: center
+		&-subscription
+			display: flex
+			flex-wrap: wrap
+			align-items: center
+			margin: 60px 0px 50px
+			@media (max-width: 1239px)
+				justify-content: space-between
+			@media (max-width: 1024px)
+				margin: 30px 0px 30px
+				flex-direction: column
+		&-example
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			width: 518px
+			background: #F1F0F0
+			border: 2px solid rgba(47, 51, 56, 0.5)
+			border-radius: 40px
+			padding: 5px 15px 5px 30px
+			font-weight: 300
+			font-size: 18px
+			line-height: 24px
+			@media (max-width: 740px)
+				font-size: 15px
+				line-height: 17px
+				width: 100%
+		&-input
+			border: none
+			background: #F1F0F0
+			@media (max-width: 1024px)
+				font-size: 16px
+			@media (max-width: 740px)
+				font-size: 15px
+.subscription-container
+	position: relative
+	max-height: 125px
+	max-width: 520px
+	@media (max-width: 740px)
+		max-height: 125px
+		max-width: 100%
+	img
+		position: absolute
+		right: 0px
+		top: -56px
+		@media (max-width: 740px)
+			display: none
+.note
+	&__block
+		max-width: 1440px
+		box-sizing: border-box
+		margin: 0 auto
+		padding: 0px 100px 80px
+		@media (max-width: 1239px)
+			max-width: 1240px
+			padding: 0px 30px 60px
+		@media (max-width: 1024px)
+			max-width: 1024px
+			padding: 0px 20px 50px
+		@media (max-width: 740px)
+			display: flex
+			flex-direction: column
+			align-items: center
+			max-width: 740px
+			padding: 0px 20px 40px
+		@media (max-width: 380px)
+			max-width: 380px
+		&-grid
+			row-gap: 40px
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			@media (max-width: 1239px)
+				row-gap: 15px
+#button-subscription
+	display: flex
+	align-items: center
+#button-note
+	margin-top: 30px
