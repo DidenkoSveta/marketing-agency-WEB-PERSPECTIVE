@@ -1818,9 +1818,11 @@ footer
 		&-sorting
 			display: flex
 			flex-wrap: wrap
-			justify-content: space-evenly
+			justify-content: center
+			gap: 10px
 			@media (max-width: 1024px)
 				justify-content: center
+				gap: 0px
 		&-link
 			display: inline-block
 			padding: 8px 20px
@@ -1914,6 +1916,8 @@ footer
 				font-size: 15px
 				line-height: 17px
 				width: 100%
+			@media (max-width: 380px)
+				padding: 5px 10px 5px 20px
 		&-input
 			border: none
 			background: #F1F0F0
@@ -1921,6 +1925,8 @@ footer
 				font-size: 16px
 			@media (max-width: 740px)
 				font-size: 15px
+			@media (max-width: 380px)
+				width: 50%
 .subscription-container
 	position: relative
 	max-height: 125px
@@ -1964,5 +1970,9 @@ footer
 #button-subscription
 	display: flex
 	align-items: center
+	@media (max-width: 380px)
+		width: 110px
+		font-size: 14px
+		height: 40px
 #button-note
 	margin-top: 30px
