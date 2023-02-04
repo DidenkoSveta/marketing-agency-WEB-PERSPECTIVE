@@ -18,12 +18,12 @@
 <body>
    <header>
       <div class="header__block">
-         <a class="header__block-logo" href="#"><img src="assets/svg/logo.svg" alt="logo"></a>
+         <a class="header__block-logo" href="index.html"><img src="assets/svg/logo.svg" alt="logo"></a>
          <button type="button" class="burger header__burger"></button>
          <nav class="navigation__header">
             <button type="button" class="close header__close"></button>
             <ul class="header__block-lists navigation__menu">
-               <li class="header__block-link"><a class="header__block-list" href="#">Главная</a></li>
+               <li class="header__block-link"><a class="header__block-list" href="index.html">Главная</a></li>
                <li class="header__block-taplink"><a class="header__block-list" href="#">Услуги</a>
                   <ul class="header__block-underlists">
                      <li class="header__block-underlist"><a href="#">Контекстная реклама</a></li>
@@ -40,7 +40,7 @@
                <li><a class="header__block-list" href="#">Стоимость</a></li>
                <li><a class="header__block-list" href="#">Кейсы</a></li>
                <li><a class="header__block-list" href="#">Блог</a></li>
-               <li><a class="header__block-list" href="#">Контакты</a></li>
+               <li><a class="header__block-list" href="contacts.html">Контакты</a></li>
             </ul>
          </nav>
          <a class="button__feedback button__feedback-header" id="button-head" href="#">Обсудить проект</a>
@@ -54,13 +54,15 @@
                себя в интернете.</h5>
             <hr>
             <div class="publication__block-subscription">
-               <img src="assets/svg/subscription.svg" alt="subscription">
                <h5 class="publication__block-text">Подпишитесь на еженедельные полезные статьи от агентства WEB
                   ПЕРСПЕКТИВА:</h5>
-               <form class="publication__block-example" action="action_block-subscription.php">
-                  <input class="publication__block-input" type="text" placeholder="Ваш email - адресс" name="email">
-                  <button class="button__feedback button__feedback-header" type="submit">Подписаться</button>
-               </form>
+               <div class="subscription-container">
+                  <img src="assets/svg/subscription.svg" alt="subscription">
+                  <form class="publication__block-example" action="action_block-subscription.php">
+                     <input class="publication__block-input" type="text" placeholder="email - адресс" name="email">
+                     <button class="button__feedback button__feedback-header" id="button-subscription" type="submit">Подписаться</button>
+                  </form>
+               </div>
             </div>
             <hr>
             <nav>
@@ -85,17 +87,17 @@
       <section class="note">
          <div class="note__block">
             <div class="note__block-grid">
-               <div class="note__block-card">
+               <div class="articles__block-card">
                   <img src="assets/img/articles/articles-1.png" alt="articles" class="articles__block-img">
                   <div class="articles__block-incard">
-                     <p class="articles__block-subtitle">Как UI дизайн помогает настроить на покупку</p>
+                     <h6 class="articles__block-subtitle">Как UI дизайн помогает настроить на покупку</h6>
                      <p class="articles__block-text">12 дней назад</p>
                   </div>
                </div>
                <div class="articles__block-card">
                   <img src="assets/img/articles/articles-2.png" alt="articles" class="articles__block-img">
                   <div class="articles__block-incard">
-                     <p class="articles__block-subtitle">Топ 15 SEO расширений для Chrome</p>
+                     <h5 class="articles__block-subtitle">Топ 15 SEO расширений для Chrome</h5>
                      <p class="articles__block-text">12 дней назад</p>
                   </div>
 
@@ -103,21 +105,21 @@
                <div class="articles__block-card">
                   <img src="assets/img/articles/articles-3.png" alt="articles" class="articles__block-img">
                   <div class="articles__block-incard">
-                     <p class="articles__block-subtitle">Увеличение лидов, через SEO</p>
+                     <h5 class="articles__block-subtitle">Увеличение лидов, через SEO</h5>
                      <p class="articles__block-text">12 дней назад</p>
                   </div>
                </div>
                <div class="articles__block-card">
                   <img src="assets/img/articles/articles-1.png" alt="articles" class="articles__block-img">
                   <div class="articles__block-incard">
-                     <p class="articles__block-subtitle">Как UI дизайн помогает настроить на покупку</p>
+                     <h5 class="articles__block-subtitle">Как UI дизайн помогает настроить на покупку</h5>
                      <p class="articles__block-text">12 дней назад</p>
                   </div>
                </div>
                <div class="articles__block-card">
                   <img src="assets/img/articles/articles-2.png" alt="articles" class="articles__block-img">
                   <div class="articles__block-incard">
-                     <p class="articles__block-subtitle">Топ 15 SEO расширений для Chrome</p>
+                     <h5 class="articles__block-subtitle">Топ 15 SEO расширений для Chrome</h5>
                      <p class="articles__block-text">12 дней назад</p>
                   </div>
 
@@ -125,21 +127,21 @@
                <div class="articles__block-card">
                   <img src="assets/img/articles/articles-3.png" alt="articles" class="articles__block-img">
                   <div class="articles__block-incard">
-                     <p class="articles__block-subtitle">Увеличение лидов, через SEO</p>
+                     <h5 class="articles__block-subtitle">Увеличение лидов, через SEO</h5>
                      <p class="articles__block-text">12 дней назад</p>
                   </div>
                </div>
                <div class="articles__block-card">
                   <img src="assets/img/articles/articles-1.png" alt="articles" class="articles__block-img">
                   <div class="articles__block-incard">
-                     <p class="articles__block-subtitle">Как UI дизайн помогает настроить на покупку</p>
+                     <h5 class="articles__block-subtitle">Как UI дизайн помогает настроить на покупку</h5>
                      <p class="articles__block-text">12 дней назад</p>
                   </div>
                </div>
                <div class="articles__block-card">
                   <img src="assets/img/articles/articles-2.png" alt="articles" class="articles__block-img">
                   <div class="articles__block-incard">
-                     <p class="articles__block-subtitle">Топ 15 SEO расширений для Chrome</p>
+                     <h5 class="articles__block-subtitle">Топ 15 SEO расширений для Chrome</h5>
                      <p class="articles__block-text">12 дней назад</p>
                   </div>
 
@@ -147,11 +149,12 @@
                <div class="articles__block-card">
                   <img src="assets/img/articles/articles-3.png" alt="articles" class="articles__block-img">
                   <div class="articles__block-incard">
-                     <p class="articles__block-subtitle">Увеличение лидов, через SEO</p>
+                     <h5 class="articles__block-subtitle">Увеличение лидов, через SEO</h5>
                      <p class="articles__block-text">12 дней назад</p>
                   </div>
                </div>
             </div>
+            <a class="button__feedback button__feedback-header" id="button-note" href="#">Смотреть больше</a>
          </div>
       </section>
    </main>
