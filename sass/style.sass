@@ -41,6 +41,7 @@ hr
 input
 	margin: 0
 	padding: 0
+	outline: none
 input:autofill, input:autofill:focus, input:autofill:hover
 	transition: background-color 5000s ease-in-out 0s
 	-webkit-text-fill-color: $wgrey
@@ -1815,6 +1816,79 @@ footer
 			padding: 60px 20px 30px
 		@media (max-width: 380px)
 			max-width: 380px
+		&-container
+			width: 100%
+			p, ul
+				margin-bottom: 20px
+				font-weight: 400
+				font-size: 18px
+				line-height: 30px
+				@media (max-width: 1024px)
+					font-size: 16px
+					line-height: 24px
+					margin-top: 10px
+				@media (max-width: 380px)
+					font-size: 15px
+					line-height: 21px
+			ul
+				li
+					list-style-type: disc
+					list-style-position: inside
+		&-img
+			background: url('../assets/img/blog/cms.png')
+			background-size: contain
+			background-repeat: no-repeat
+			position: relative
+			height: 335px
+			width: 500px
+			margin: 20px auto 40px
+			@media (max-width: 740px)
+				height: 220px
+				width: 300px
+				margin: 20px auto 10px
+			@media (max-width: 380px)
+				width: 280px
+				height: 200px
+		&-date
+			margin-top: 80px
+			display: flex
+			justify-content: space-between
+			@media (max-width: 740px)
+				flex-direction: column
+			@media (max-width: 380px)
+				margin-top: 40px
+		&-tags
+			display: flex
+			gap: 15px
+			@media (max-width: 740px)
+				margin-top: 20px
+				flex-wrap: wrap
+				justify-content: center
+				gap: 10px
+		&-tag
+			display: flex
+			flex-direction: row
+			color: $orange
+		&-tag:before
+			content: '\0023'
+			display: block
+			position: relative
+			color: $orange
+		&-time
+			display: flex
+			align-items: center
+			@media (max-width: 380px)
+				justify-content: center
+		&-time:before
+			content: ''
+			display: inline-block
+			position: relative
+			background: url('../assets/svg/time.svg')
+			background-size: contain
+			background-repeat: no-repeat
+			height: 26px
+			width: 26px
+			margin-right: 5px
 		&-sorting
 			display: flex
 			flex-wrap: wrap
@@ -1927,6 +2001,8 @@ footer
 				font-size: 15px
 			@media (max-width: 380px)
 				width: 50%
+			&-input
+				outline: none
 .subscription-container
 	position: relative
 	max-height: 125px
@@ -1975,4 +2051,80 @@ footer
 		font-size: 14px
 		height: 40px
 #button-note
+	margin: 0 auto
 	margin-top: 30px
+.publication-hr
+	margin: 5px auto
+.casses
+	&__block
+		display: flex
+		flex-direction: column
+		align-items: center
+		max-width: 1440px
+		box-sizing: border-box
+		margin: 0 auto
+		padding: 160px 100px 0px
+		@media (max-width: 1239px)
+			max-width: 1240px
+			padding: 100px 30px 0px
+		@media (max-width: 1024px)
+			max-width: 1024px
+			padding: 80px 20px 0px
+		@media (max-width: 740px)
+			max-width: 740px
+			padding: 100px 20px 0px
+		@media (max-width: 380px)
+			max-width: 380px
+		&-grid
+			margin-top: 50px
+			@media (max-width: 740px)
+				margin-top: 20px
+		&-title
+			text-align: center
+			margin-bottom: 20px
+		&-subtitle
+			text-align: center
+			max-width: 460px
+			margin: 0 auto
+			font-weight: 400
+			font-size: 18px
+			line-height: 24px
+			@media (max-width: 740px)
+				font-size: 16px
+				line-height: 18px
+		&-img
+			background: url('../assets/svg/scroll.svg')
+			background-size: contain
+			background-repeat: no-repeat
+			position: relative
+			height: 24px
+			width: 16px
+			margin-top: 20px
+.casses-hr
+	width: 100%
+	height: 0px
+	border: 1px solid rgba(47, 51, 56, 0.3)
+	margin: 40px auto
+	display: inline-block
+.casses-contact__form
+	margin-top: 40px
+.services
+	&__block
+		display: flex
+		flex-direction: column
+		align-items: center
+		max-width: 1440px
+		box-sizing: border-box
+		margin: 0 auto
+		padding: 160px 100px 0px
+		@media (max-width: 1239px)
+			max-width: 1240px
+			padding: 100px 30px 0px
+		@media (max-width: 1024px)
+			max-width: 1024px
+			padding: 80px 20px 0px
+		@media (max-width: 740px)
+			max-width: 740px
+			padding: 100px 20px 0px
+		@media (max-width: 380px)
+			max-width: 380px
