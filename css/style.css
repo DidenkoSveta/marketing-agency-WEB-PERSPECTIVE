@@ -3668,6 +3668,15 @@ footer {
     margin-right: 3px;
   }
 }
+@media (max-width: 740px) {
+  .publication__block-link:before:hover {
+    content: "#";
+    display: block;
+    position: relative;
+    color: #F47E51;
+    margin-right: 3px;
+  }
+}
 .publication__block-link:hover {
   color: #FAFAFA;
   background: #2F3338;
