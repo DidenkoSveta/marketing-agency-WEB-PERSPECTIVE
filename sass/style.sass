@@ -1171,6 +1171,12 @@ h4
 			@media (max-width: 1024px)
 				font-size: 16px
 				max-width: 95%
+			@media (max-width: 740px)
+				font-size: 15px
+				max-width: 100%
+				line-height: 18px
+		&-subtitle2
+			max-width: 100%
 		&-lists
 			display: flex
 			flex-wrap: wrap
@@ -1194,6 +1200,9 @@ h4
 				font-size: 16px
 				line-height: 18px
 				padding-top: 12px
+			@media (max-width: 740px)
+				font-size: 15px
+				line-height: 16px
 		&-name
 			font-weight: 600
 			font-size: 24px
@@ -1202,6 +1211,9 @@ h4
 			@media (max-width: 1439px)
 				font-size: 20px
 				line-height: 27px
+			@media (max-width: 740px)
+				font-size: 16px
+				line-height: 18px
 .quality-card
 	display: flex
 	align-items: center
@@ -1276,9 +1288,13 @@ h4
 			gap: 50px
 			margin-bottom: 80px
 			@media (max-width: 1439px)
-				gap: 30px
+				gap: 10px
 			@media (max-width: 1040px)
 				gap: 20px
+			@media (max-width: 740px)
+				gap: 10px
+				margin-bottom: 50px
+				margin-top: 20px
 		&-subtitle
 			font-weight: 400
 			font-size: 24px
@@ -1290,6 +1306,9 @@ h4
 				font-size: 20px
 				line-height: 26px
 				margin-top: -20px
+			@media (max-width: 740px)
+				line-height: 18px
+				font-size: 15px
 		&-number
 			background-image: url("../assets/svg/number.svg")
 			background-size: contain
@@ -1315,6 +1334,8 @@ h4
 				width: 46px
 				height: 40px
 				font-size: 28px
+			@media (max-width: 380px)
+				display: none
 		&-name
 			font-weight: 700
 			font-size: 18px
@@ -1323,6 +1344,8 @@ h4
 				font-size: 16px
 			@media (max-width: 1040px)
 				font-size: 15px
+			@media (max-width: 380px)
+				margin-left: 10px
 		&-incard
 			display: flex
 			flex-direction: row
@@ -1339,24 +1362,32 @@ h4
 			padding: 30px 15px
 			border-radius: 20px
 			box-shadow: 0px 4px 15px rgba(47, 51, 56, 0.1), 0px 4px 15px rgba(236, 106, 106, 0.1)
-			ul
-				margin-left: 60px
 			@media (max-width: 1439px)
-				max-width: 340px
-			@media (max-width: 1240px)
-				max-width: 440px
-				min-width: 440px
+				max-width: 350px
+			@media (max-width: 1239px)
+				max-width: 320px
 			@media (max-width: 1040px)
 				max-width: 330px
-				min-width: 330px
+			@media (max-width: 740px)
+				max-width: 400px
+			@media (max-width: 380px)
+				max-width: 100%
+				min-width: 100%
+			ul
+				margin-left: 60px
+				@media (max-width: 380px)
+					margin-left: 20px
 #steps__block-card5, #steps__block-card4
 	max-width: 420px
 	@media (max-width: 1240px)
-		max-width: 440px
-		min-width: 440px
+		max-width: 350px
+		min-width: 350px
 	@media (max-width: 1040px)
 		max-width: 330px
 		min-width: 330px
+	@media (max-width: 380px)
+		max-width: 100%
+		min-width: 100%
 #contact__form-services
 	margin-top: 0px
 	margin-bottom: 80px
