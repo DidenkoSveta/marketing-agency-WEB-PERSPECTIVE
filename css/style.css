@@ -1431,6 +1431,7 @@ h4 {
   line-height: 21px;
   padding: 20px 0;
   max-width: 300px;
+  text-align: center;
 }
 @media (max-width: 1439px) {
   .cases__block-name {
@@ -2391,6 +2392,21 @@ h4 {
   }
 }
 
+.calling-block {
+  margin-top: 80px;
+}
+.calling-block-subtitle {
+  max-width: 100%;
+  margin-bottom: 50px;
+}
+
+.target-grid {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .quality-card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2620,6 +2636,7 @@ h4 {
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 0.02em;
+  max-width: 80%;
 }
 @media (max-width: 1439px) {
   .steps__block-name {
