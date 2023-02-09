@@ -439,7 +439,7 @@ h4
 	@media (max-width: 1024px)
 		line-height: 30px
 .block__slogan
-	max-width: 590px
+	max-width: 550px
 	margin-top: 60px
 	@media (max-width: 1439px)
 		margin-top: 100px
@@ -752,7 +752,7 @@ h4
 			line-height: 21px
 			padding: 20px 0
 			max-width: 300px
-			text-align: center
+			text-align: left
 			@media (max-width: 1439px)
 				padding: 10px 0
 				font-size: 16px
@@ -2443,3 +2443,57 @@ footer
 			padding: 100px 20px 0px
 		@media (max-width: 380px)
 			max-width: 380px
+		&-subtitle
+			text-align: center
+			max-width: 860px
+			margin: 0 auto
+			font-weight: 400
+			font-size: 18px
+			line-height: 24px
+			@media (max-width: 740px)
+				font-size: 16px
+				line-height: 18px
+		&-grid
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+		&-card
+			position: relative
+			display: flex
+			flex-direction: column
+			max-width: 350px
+			margin: 40px auto
+			@media (max-width: 1040px)
+				max-width: 250px
+				margin: 20px auto
+		&-name
+			font-weight: 700
+			font-size: 24px
+			line-height: 28px
+			margin-top: 10px
+			@media (max-width: 1040px)
+				font-size: 20px
+		&-text
+			font-weight: 400
+			font-size: 18px
+			line-height: 23px
+			max-width: 350px
+			margin: 15px 0px
+			@media (max-width: 1040px)
+				font-size: 15px
+				max-width: 250px
+				line-height: 20px
+				margin: 10px 0px
+		&-img
+			height: 350px
+			width: 350px
+			background-size: cover
+			background-repeat: no-repeat
+			padding: 0px
+			@media (max-width: 1040px)
+				height: 250px
+				width: 250px
+.services__block-card:hover
+	transform: translateY(-10px) scale(1.01)
+	transition-duration: 0.1s
+	cursor: pointer
