@@ -2524,9 +2524,90 @@ footer
 	right: -1px
 	fill: #fff
 	transition: all .3s ease-in-out
-#toTop.show 
+#toTop.show
 	opacity: 1
 	visibility: visible
 	right: calc(4%)
 	@media (max-width: 740px)
 		right: calc(15%)
+.brand-text
+	font-weight: 400
+	font-size: 18px
+	line-height: 27px
+	max-width: 95%
+	@media (max-width: 1239px)
+		font-size: 16px
+		line-height: 24px
+	@media (max-width: 740px)
+		font-size: 15px
+		line-height: 20px
+	span
+		font-weight: 600
+.marketplace
+	&__block
+		display: flex
+		flex-direction: column
+		align-items: center
+		max-width: 1440px
+		box-sizing: border-box
+		margin: 0 auto
+		padding: 120px 100px 0px
+		@media (max-width: 1239px)
+			max-width: 1240px
+			padding: 0px 30px 0px
+		@media (max-width: 1040px)
+			max-width: 1040px
+			padding: 20px 20px 0px
+		@media (max-width: 740px)
+			max-width: 740px
+			padding: 0px 20px 0px
+		@media (max-width: 380px)
+			max-width: 380px
+			padding: 0px 20px 0px
+		&-grid
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			gap: 20px
+			@media (max-width: 1024px)
+				justify-content: center
+			@media (max-width: 380px)
+				justify-content: space-between
+				gap: 15px
+		&-card
+			width: 210px
+			height: 100px
+			background: #FFFFFF
+			box-shadow: 4px 4px 15px rgba(47, 51, 56, 0.3)
+			border-radius: 10px
+			@media (max-width: 1439px)
+				width: 190px
+				height: 91px
+			@media (max-width: 1239px)
+				width: 170px
+				height: 81px
+			@media (max-width: 1024px)
+				width: 150px
+				height: 72px
+			@media (max-width: 380px)
+				width: 130px
+				height: 62px
+			img
+				border-radius: 10px
+				width: 100%
+		&-subtitle
+			font-weight: 400
+			font-size: 24px
+			line-height: 28px
+			letter-spacing: 0.01em
+			margin-bottom: 30px
+			@media (max-width: 1439px)
+				font-size: 20px
+				line-height: 26px
+				margin-bottom: 20px
+				margin-top: -20px
+			@media (max-width: 1024px)
+				font-size: 16px
+			@media (max-width: 740px)
+				font-size: 15px
+				line-height: 18px
