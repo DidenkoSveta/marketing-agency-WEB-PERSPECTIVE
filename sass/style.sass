@@ -2981,10 +2981,10 @@ footer
 		align-items: center
 		@media (max-width: 1239px)
 			max-width: 1240px
-			padding: 0px 30px 0px
+			padding: 100px 30px 0px
 		@media (max-width: 1040px)
 			max-width: 1040px
-			padding: 0px 20px 20px
+			padding: 100px 20px 20px
 		@media (max-width: 740px)
 			max-width: 740px
 			padding: 0px 20px 20px
@@ -2994,14 +2994,21 @@ footer
 		h1
 			text-align: center
 			margin: 40px 0px 40px
+			@media (max-width: 1040px)
+				margin: 20px auto 10px
 		h5
 			font-weight: 400
 			font-size: 18px
-			line-height: 21px
+			line-height: 25px
 			text-align: center
 			max-width: 840px
 			@media (max-width: 1439px)
 				font-size: 16px
+				line-height: 20px
+			@media (max-width: 1239px)
+				font-size: 15px
+				line-height: 18px
+				max-width: 700px
 		&-cardWhite
 			display: flex
 			flex-direction: column
@@ -3012,29 +3019,45 @@ footer
 			box-shadow: 0px 4px 15px rgba(47, 51, 56, 0.1), 0px 4px 15px rgba(236, 106, 106, 0.2)
 			border-radius: 15px
 			padding-bottom: 40px
+			@media (max-width: 1439px)
+				width: 320px
+			@media (max-width: 1040px)
+				width: 300px
 			img
 				position: relative
 				z-index: 2
 				width: 50px
 				height: 50px
 				margin: 2px auto
+				@media (max-width: 1439px)
+					width: 40px
+					height: 40px
+				@media (max-width: 1040px)
+					width: 35px
+					height: 35px
 		&-lists
 			display: flex
 			flex-direction: column
 			align-items: center
 			padding: 30px 20px
+			@media (max-width: 1040px)
+				padding: 30px 15px
 			li
 				font-size: 16px
 				font-weight: 500
 				text-align: center
-				padding: 0px 
-			li:after 
+				padding: 0px
+				@media (max-width: 1040px)
+					font-size: 15px
+			li:after
 				content: ""
 				display: block
 				height: 1px
 				width: 260px
 				background: rgba(244, 126, 81, 0.5)
 				margin: 6px auto
+				@media (max-width: 1040px)
+					width: 200px
 		&-listsBlack
 			display: flex
 			flex-direction: column
@@ -3043,20 +3066,27 @@ footer
 				font-size: 16px
 				font-weight: 300
 				text-align: center
-				padding: 0px 
+				padding: 0px
 				color: $wgrey
-			li:after 
+				@media (max-width: 1040px)
+					font-size: 15px
+			li:after
 				content: ""
 				display: block
 				height: 1px
 				width: 200px
 				background: rgba(244, 126, 81, 0.5)
 				margin: 6px auto
-		&-value 
+				@media (max-width: 1040px)
+					width: 150px
+		&-value
 			display: flex
 			justify-content: space-between
 			margin-top: 55px
 			padding: 0px 32px
+			@media (max-width: 1439px)
+				margin-top: 24px
+				padding: 0px 20px
 			li
 				text-align: center
 				max-width: 90px
@@ -3066,10 +3096,16 @@ footer
 				color: $black
 				position: relative
 				z-index: 2
+				@media (max-width: 1439px)
+					font-size: 18px
+					line-height: 18px
 				span
 					font-weight: 500
 					font-size: 16px
 					line-height: 19px
+					@media (max-width: 1439px)
+						font-size: 15px
+						line-height: 15px
 		&-cardBlack
 			display: flex
 			flex-direction: column
@@ -3079,6 +3115,11 @@ footer
 			box-shadow: 0px 4px 15px rgba(47, 51, 56, 0.1), 0px 4px 15px rgba(236, 106, 106, 0.2)
 			border-radius: 15px
 			padding-bottom: 40px
+			@media (max-width: 1439px)
+				width: 320px
+				padding-bottom: 20px
+			@media (max-width: 1040px)
+				width: 300px
 		&-triangle:before
 			content: ""
 			display: block
@@ -3102,13 +3143,21 @@ footer
 			background-size: contain
 			background-repeat: no-repeat
 			z-index: 0
-		&-top 
+			@media (max-width: 1439px)
+				width: 320px
+			@media (max-width: 1040px)
+				width: 300px
+		&-top
 			width: 100%
 			display: flex
 			flex-wrap: wrap
 			row-gap: 100px
 			justify-content: space-between
 			margin-top: 80px
+			@media (max-width: 1040px)
+				row-gap: 60px
+				column-gap: 10px
+				justify-content: space-evenly
 		&-service
 			font-size: 24px
 			position: relative
@@ -3118,7 +3167,24 @@ footer
 			line-height: 19px
 			text-align: center
 			margin-top: 30px
-		&-hr 
+			@media (max-width: 1439px)
+				font-size: 20px
+		&-service2
+			font-size: 24px
+			position: relative
+			z-index: 2
+			color: $wgrey
+			font-weight: 500
+			line-height: 22px
+			text-align: center
+			margin-top: 30px
+			@media (max-width: 1439px)
+				font-size: 20px
+			@media (max-width: 1040px)
+				font-size: 18px
+		&-serviceText
+			margin-top: 15px
+		&-hr
 			margin: 8px auto
 			position: relative
 			z-index: 2
@@ -3127,22 +3193,39 @@ footer
 			background: $wgrey
 		&-hrBlack
 			width: 300px
+			@media (max-width: 1439px)
+				width: 250px
 		&-serviceBlack
 			margin-top: 20px
 			line-height: 22px
-		&-cost 
+			@media (max-width: 1439px)
+				margin-top: 14px
+		&-serviceBlack2
+			margin-top: 5px
+			line-height: 22px
+			@media (max-width: 1439px)
+				margin-top: -1px
+		&-cost
 			margin: 0 auto
 			font-weight: 700
 			font-size: 26px
 			line-height: 30px
 			position: relative
+			@media (max-width: 1040px)
+				font-size: 22px
+				line-height: 20px
 			span
 				font-weight: 500
 				font-size: 16px
 				line-height: 19px
-		&-costet 
+				@media (max-width: 1040px)
+					font-size: 15px
+					line-height: 16px
+		&-costet
 			margin-top: 30px
-		&-btn 
+			@media (max-width: 1040px)
+				margin-top: 15px
+		&-btn
 			margin: 25px auto 0px
 		&-containerBlack
 			margin: 30px auto 0px
@@ -3156,7 +3239,10 @@ footer
 				color: $wgrey
 				text-align: center
 				letter-spacing: 0.02em
-		&-keys 
+				@media (max-width: 1040px)
+					font-size: 15px
+					line-height: 16px
+		&-keys
 			display: flex
 			color: $wgrey
 			justify-content: space-between
@@ -3168,6 +3254,8 @@ footer
 			background-repeat: no-repeat
 			width: 340px
 			height: 31px
+			@media (max-width: 1439px)
+				width: 300px
 		&-site
 			display: flex
 			flex-direction: column
@@ -3184,7 +3272,7 @@ footer
 				span
 					color: $orange
 					font-weight: 600
-		&-litle:after 
+		&-litle:after
 			content: ""
 			display: block
 			height: 1px
@@ -3198,6 +3286,35 @@ footer
 			line-height: 20px
 			margin: 50px auto
 			text-align: center
+		&-sales
+			margin-top: 60px
+			margin-bottom: 60px
+			display: flex
+			flex-direction: column
+			align-items: center
+		&-email
+			width: 100%
+			margin-top: 60px
+			display: flex
+			flex-direction: column
+			align-items: center
+		&-column2
+			margin-top: 20px
+			width: 100%
+			display: flex
+			gap: 150px
+			@media (max-width: 1040px)
+				gap: 20px
+				display: flex
+				flex-wrap: wrap
+				justify-content: space-between
+		&-column3
+			width: 100%
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			align-items: flex-start
+			margin-top: 10px
 .pricing__block-text1
 	color: $wgrey
 	font-weight: 500
@@ -3205,6 +3322,9 @@ footer
 	line-height: 19px
 	text-align: center
 	margin: 10px auto
+	@media (max-width: 1040px)
+		font-size: 15px
+		line-height: 17px
 .pricing__block-text2
 	color: $wgrey
 	font-weight: 300
@@ -3213,11 +3333,22 @@ footer
 	text-align: center
 	max-width: 308px
 	margin: 10px auto 0px
+	@media (max-width: 1040px)
+		font-size: 15px
+		line-height: 20px
+		max-width: 260px
 .pricing__block-text3
 	margin-top: 60px
 	color: $wgrey
 	font-weight: 500
 	text-align: center
 	letter-spacing: 0.065em
+	@media (max-width: 1040px)
+		margin-top: 40px
 	span
 		font-weight: 300
+.pricing__card:hover
+	transform: scale(1.05)
+	transition-duration: 0.1s
+	cursor: pointer
+	box-shadow: 0px 4px 15px rgba(244, 126, 81, 0.8), 0px 4px 15px rgba(244, 126, 81, 0.8)
