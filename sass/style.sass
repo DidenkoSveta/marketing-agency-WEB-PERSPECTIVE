@@ -608,11 +608,14 @@ h4
 .service__block-card:hover
 	transform: rotateY(180deg)
 	cursor: pointer
+	@media (max-width: 740px)
+		transform: rotateY(0deg)
 .service__block-card:focus
 	transform: rotateY(180deg)
 	cursor: pointer
 	transition: transform 2s
 	@media (max-width: 740px)
+		transform: rotateY(0deg)
 		transition: transform 20s
 .card-face
 	display: flex
