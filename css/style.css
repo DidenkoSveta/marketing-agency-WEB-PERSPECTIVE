@@ -1171,6 +1171,15 @@ h4 {
   transition: transform 2s;
   transition: transform 2s, -webkit-transform 2s;
 }
+@media (max-width: 740px) {
+  .service__block-card:focus {
+    -webkit-transition: -webkit-transform 20s;
+    transition: -webkit-transform 20s;
+    -o-transition: transform 20s;
+    transition: transform 20s;
+    transition: transform 20s, -webkit-transform 20s;
+  }
+}
 
 .card-face {
   display: -webkit-box;
