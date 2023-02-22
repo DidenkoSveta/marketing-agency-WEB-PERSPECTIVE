@@ -1160,6 +1160,12 @@ h4 {
           transform: rotateY(180deg);
   cursor: pointer;
 }
+@media (max-width: 740px) {
+  .service__block-card:hover {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
 
 .service__block-card:focus {
   -webkit-transform: rotateY(180deg);
@@ -1173,6 +1179,8 @@ h4 {
 }
 @media (max-width: 740px) {
   .service__block-card:focus {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
     -webkit-transition: -webkit-transform 20s;
     transition: -webkit-transform 20s;
     -o-transition: transform 20s;
