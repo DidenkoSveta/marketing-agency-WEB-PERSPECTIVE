@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: Создание сайтов
+Template Name: Website development
  */
 ?>
 

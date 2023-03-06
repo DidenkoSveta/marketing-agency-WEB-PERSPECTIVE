@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: Автоматизация продаж
+Template Name: Sales automation
  */
 ?>
 

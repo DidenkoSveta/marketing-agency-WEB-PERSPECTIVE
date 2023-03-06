@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: Реклама на маркетплейсах
+Template Name: marketplaces
  */
 ?>
 

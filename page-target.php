@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: Таргетированная реклама
+Template Name: Target
  */
 ?>
 

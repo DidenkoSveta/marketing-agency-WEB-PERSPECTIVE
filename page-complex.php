@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: Комплексный маркетинг
+Template Name: Comprehensive marketing
  */
 ?>
 

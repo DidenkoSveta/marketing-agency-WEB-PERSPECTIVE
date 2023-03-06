@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: SEO- продвижение
+Template Name: SEO promotion
  */
 ?>
 

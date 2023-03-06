@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: Кейс
+Template Name: Case
  */
 ?>
 
