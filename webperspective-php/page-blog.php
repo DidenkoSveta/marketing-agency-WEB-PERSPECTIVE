@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: Блог
+Template Name: Blog
  */
 ?>
 

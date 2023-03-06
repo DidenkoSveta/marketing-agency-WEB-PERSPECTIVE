@@ -2,35 +2,46 @@
       <div class="footer__block">
          <a href="#" id="toTop"><img src="<?php bloginfo('template_url'); ?>/assets/svg/up-arrow.svg" alt="toTop"></a>
          <div class="footer-block-name">
-            <a class="footer__block-logo" id="footer-logo" href="index.html"><img src="<?php bloginfo('template_url'); ?>/assets/svg/footer-logo.svg"
-                  alt="logo"></a>
+            <div class="footer__block-logo footer__logo" id="footer-logo">
+            <a href="" class="header-logo">
+               <?php
+                  $footer__logo = get_theme_mod('footer__logo');
+                  $img = wp_get_attachment_image_src($footer__logo, 'full');
+                  if ($img) :
+                     ?>
+                     <img src="<?php echo $img[0]; ?>" alt="">
+               <?php endif; ?>
+            </a>
+            </div>
+
             <a class="button__feedback button__feedback-header" id="button-footer" href="#">Обсудить проект</a>
          </div>
          <nav class="navigation__footer footer__block-service">
-            <ul class="footer__block-lists">
-               <li><a class="footer__block-title" href="#">Услуги</a></li>
-               <li class="footer__block-change"><a class="footer__block-list" href="context.html">Контекстная
-                     реклама</a></li>
-               <li><a class="footer__block-list" href="seo.html">SEO продвижение</a></li>
-               <li><a class="footer__block-list" href="development.html">Создание сайтов</a></li>
-               <li><a class="footer__block-list" href="target.html">Таргетированная реклама</a></li>
-               <li><a class="footer__block-list" href="complex.html">Комплексный маркетинг</a></li>
-               <li><a class="footer__block-list" href="brand.html">Фирменный стиль</a></li>
-               <li><a class="footer__block-list" href="marketplace.html">Реклама на маркетплейсах</a></li>
-               <li><a class="footer__block-list" href="calling.html">Автоматизация продаж</a></li>
-               <li><a class="footer__block-list" href="email.html">Email маркетинг</a></li>
-            </ul>
+            <?php
+                  wp_nav_menu( [
+                     'menu'            => 'Menu-footer',
+                     'container'       => false,
+                     'menu_class'      => 'footer__block-lists',
+                     'echo'            => true,
+                     'fallback_cb'     => 'wp_page_menu',
+                     'items_wrap'      => '<ul class="footer__block-lists">%3$s</ul>',
+                     'depth'           => 2,
+                  ] );
+            ?>
          </nav>
+
          <nav class="navigation__footer footer__block-navigation">
-            <ul class="footer__block-lists">
-               <li><a class="footer__block-title" href="#">Навигация</a></li>
-               <li><a class="footer__block-list" href="index.html">Главная</a></li>
-               <li><a class="footer__block-list" href="services.html">Услуги</a></li>
-               <li><a class="footer__block-list" href="pricing.html">Стоимость</a></li>
-               <li><a class="footer__block-list" href="cases.html">Кейсы</a></li>
-               <li><a class="footer__block-list" href="blog.html">Блог</a></li>
-               <li><a class="footer__block-list" href="contacts.html">Контакты</a></li>
-            </ul>
+         <?php
+                  wp_nav_menu( [
+                     'menu'            => 'Menu-navigation',
+                     'container'       => false,
+                     'menu_class'      => 'footer__block-lists',
+                     'echo'            => true,
+                     'fallback_cb'     => 'wp_page_menu',
+                     'items_wrap'      => '<ul class="footer__block-lists">%3$s</ul>',
+                     'depth'           => 2,
+                  ] );
+            ?>
          </nav>
          <div class="footer__block-contacts">
             <a href="#" class="footer__block-title">Контакты</a>

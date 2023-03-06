@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: Email- маркетинг
+Template Name: Email- marketing
  */
 ?>
 

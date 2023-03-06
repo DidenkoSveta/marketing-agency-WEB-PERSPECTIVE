@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: Статья
+Template Name: Publication
  */
 ?>
 

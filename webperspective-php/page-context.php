@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: Контекстная реклама
+Template Name: Contextual advertising
  */
 ?>
 

@@ -1,20 +1,8 @@
-<!-- <!DOCTYPE html>
-<html lang="zxx">
-
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="icon" href="assets/svg/favicon.ico">
-   <title>WEB PERSPECTIVE</title>
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet">
-   <link rel="stylesheet" href="css/normalize.css">
-   <link rel="stylesheet" type="text/css" href="css/style.css">
-</head> -->
-
+<?php 
+/*
+Template Name: Home
+ */
+?>
 <?php get_header();?>
    <main>
       <section class="slogan">
@@ -22,12 +10,14 @@
             <div class="block__slogan-background">
                <div class="block__slogan">
                   <h1><span>Увеличиваем</span> прибыль бизнеса используя digital-решения</h1>
-                  <div class="block__slogan-text">
-                     <h3 class="slogan-text"><a href="development.html">Веб-разработка</a></h3>
-                     <h3 class="slogan-text"><a href="complex.html">Интернет-реклама</a></h3>
-                     <h3 class="slogan-text"><a href="brand.html">Фирменный стиль</a></h3>
-                     <h3 class="slogan-text"><a href="calling.html">Автоматизация продаж</a></h3>
-                  </div>
+                     <nav class="block__slogan-menu">
+                        <ul class="block__slogan-text">
+                           <li class="slogan-text"><a href="development.html">Веб-разработка</a></li>
+                           <li class="slogan-text"><a href="complex.html">Интернет-реклама</a></li>
+                           <li class="slogan-text"><a href="brand.html">Фирменный стиль</a></li>
+                           <li class="slogan-text"><a href="calling.html">Автоматизация продаж</a></li>
+                        </ul>
+                     </nav>
                   <div class="block__slogan-btns">
                      <a class="button__feedback button__feedback-header" id="button-slogan" href="#">Обсудить проект</a>
                      <button class="block__slogan-btn"><img src="<?php bloginfo('template_url'); ?>/assets/svg/download.svg" alt="download">Скачать
