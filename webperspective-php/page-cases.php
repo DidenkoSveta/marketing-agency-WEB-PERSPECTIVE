@@ -14,149 +14,33 @@ Template Name: Cases
             <div class="casses__block-img"></div>
             <div class="casses-hr"></div>
             <div class="cases__block-grid casses__block-grid">
-               <div class="cases__block-card">
-                  <a href="case.html" class="cases__block-link">
-                     <img src="<?php bloginfo('template_url'); ?>/assets/img/cases/case-1.png" alt="case" class="cases__block-img">
-                     <p class="cases__block-name">PALTO.RU - интернет-магазин пальто</p>
-                     <p class="cases__block-text">Создание интернет-магазина</p>
-                  </a>
-               </div>
-               <div class="cases__block-card">
-                  <a href="case.html" class="cases__block-link">
-                     <img src="<?php bloginfo('template_url'); ?>/assets/img/cases/case-2.png" alt="case" class="cases__block-img">
-                     <p class="cases__block-name">NAHODU - интернет- магазин автозапчастей</p>
-                     <p class="cases__block-text">Создание интернет-магазина, контекстная реклама, seo - оптимизация</p>
-                  </a>
-               </div>
-               <div class="cases__block-card">
-                  <a href="case.html" class="cases__block-link">
-                     <img src="<?php bloginfo('template_url'); ?>/assets/img/cases/case-3.png" alt="case" class="cases__block-img">
-                     <p class="cases__block-name">COFER- бренд термопосуды</p>
-                     <p class="cases__block-text">Комплексное продвижение интернет магазина </p>
-                  </a>
-               </div>
-               <div class="cases__block-card">
-                  <a href="case.html" class="cases__block-link">
-                     <img src="<?php bloginfo('template_url'); ?>/assets/img/cases/case-4.png" alt="case" class="cases__block-img">
-                     <p class="cases__block-name">OKEY STROY- интернет магазин отделочных материалов</p>
-                     <p class="cases__block-text">Создание интернет-магазина, контекстная реклама, работа на площадках и
-                        агрегаторах</p>
-                  </a>
-               </div>
-               <div class="cases__block-card">
-                  <a href="case.html" class="cases__block-link">
-                     <img src="<?php bloginfo('template_url'); ?>/assets/img/cases/case-5.png" alt="case" class="cases__block-img">
-                     <p class="cases__block-name">SUSHI DO - доставка японской кухни</p>
-                     <p class="cases__block-text">Создание интернет-магазина, контекстная реклама</p>
-                  </a>
-               </div>
-               <div class="cases__block-card">
-                  <a href="case.html" class="cases__block-link">
-                     <img src="<?php bloginfo('template_url'); ?>/assets/img/cases/case-6.png" alt="case" class="cases__block-img">
-                     <p class="cases__block-name">S.LOG - Оператор логистики</p>
-                     <p class="cases__block-text">Создание интернет-магазина, комплексное продвижение, автоматизация
-                        продаж</p>
-                  </a>
-               </div>
+               <?php 
+                  $posts = get_posts( array(
+                     'numberposts' => -1,
+                     'category_name'    => 'my_cases',
+                     'orderby'     => 'date',
+                     'order'       => 'ASB',
+                     'post_type'   => 'post',
+                     'suppress_filters' => true, 
+                  ) );
 
-
-               <div class="cases__block-card">
-                  <a href="case.html" class="cases__block-link">
-                     <img src="<?php bloginfo('template_url'); ?>/assets/img/cases/case-7.png" alt="case" class="cases__block-img">
-                     <p class="cases__block-name">S.LOG - Оператор логистики</p>
-                     <p class="cases__block-text">Создание интернет-магазина, комплексное продвижение, автоматизация
-                        продаж</p>
-                  </a>
-               </div>
-               <div class="cases__block-card">
-                  <a href="case.html" class="cases__block-link">
-                     <img src="<?php bloginfo('template_url'); ?>/assets/img/cases/case-8.png" alt="case" class="cases__block-img">
-                     <p class="cases__block-name">S.LOG - Оператор логистики</p>
-                     <p class="cases__block-text">Создание интернет-магазина, комплексное продвижение, автоматизация
-                        продаж</p>
-                  </a>
-               </div>
-               <div class="cases__block-card">
-                  <a href="case.html" class="cases__block-link">
-                     <img src="<?php bloginfo('template_url'); ?>/assets/img/cases/case-9.png" alt="case" class="cases__block-img">
-                     <p class="cases__block-name">S.LOG - Оператор логистики</p>
-                     <p class="cases__block-text">Создание интернет-магазина, комплексное продвижение, автоматизация
-                        продаж</p>
-                  </a>
-               </div>
-               <div class="cases__block-card">
-                  <a href="case.html" class="cases__block-link">
-                     <img src="<?php bloginfo('template_url'); ?>/assets/img/cases/case-10.png" alt="case" class="cases__block-img">
-                     <p class="cases__block-name">S.LOG - Оператор логистики</p>
-                     <p class="cases__block-text">Создание интернет-магазина, комплексное продвижение, автоматизация
-                        продаж</p>
-                  </a>
-               </div>
-               <div class="cases__block-card">
-                  <a href="case.html" class="cases__block-link">
-                     <img src="<?php bloginfo('template_url'); ?>/assets/img/cases/case-11.png" alt="case" class="cases__block-img">
-                     <p class="cases__block-name">S.LOG - Оператор логистики</p>
-                     <p class="cases__block-text">Создание интернет-магазина, комплексное продвижение, автоматизация
-                        продаж</p>
-                  </a>
-               </div>
-               <div class="cases__block-card">
-                  <a href="case.html" class="cases__block-link">
-                     <img src="<?php bloginfo('template_url'); ?>/assets/img/cases/case-12.png" alt="case" class="cases__block-img">
-                     <p class="cases__block-name">S.LOG - Оператор логистики</p>
-                     <p class="cases__block-text">Создание интернет-магазина, комплексное продвижение, автоматизация
-                        продаж</p>
-                  </a>
-               </div>
-
-               <div class="cases__block-card">
-                  <a href="case.html" class="cases__block-link">
-                     <img src="<?php bloginfo('template_url'); ?>/assets/img/cases/case-13.png" alt="case" class="cases__block-img">
-                     <p class="cases__block-name">S.LOG - Оператор логистики</p>
-                     <p class="cases__block-text">Создание интернет-магазина, комплексное продвижение, автоматизация
-                        продаж</p>
-                  </a>
-               </div>
-               <div class="cases__block-card">
-                  <a href="case.html" class="cases__block-link">
-                     <img src="<?php bloginfo('template_url'); ?>/assets/img/cases/case-14.png" alt="case" class="cases__block-img">
-                     <p class="cases__block-name">S.LOG - Оператор логистики</p>
-                     <p class="cases__block-text">Создание интернет-магазина, комплексное продвижение, автоматизация
-                        продаж</p>
-                  </a>
-               </div>
-               <div class="cases__block-card">
-                  <a href="case.html" class="cases__block-link">
-                     <img src="<?php bloginfo('template_url'); ?>/assets/img/cases/case-15.png" alt="case" class="cases__block-img">
-                     <p class="cases__block-name">S.LOG - Оператор логистики</p>
-                     <p class="cases__block-text">Создание интернет-магазина, комплексное продвижение, автоматизация
-                        продаж</p>
-                  </a>
-               </div>
-               <div class="cases__block-card">
-                  <a href="case.html" class="cases__block-link">
-                     <img src="<?php bloginfo('template_url'); ?>/assets/img/cases/case-16.png" alt="case" class="cases__block-img">
-                     <p class="cases__block-name">S.LOG - Оператор логистики</p>
-                     <p class="cases__block-text">Создание интернет-магазина, комплексное продвижение, автоматизация
-                        продаж</p>
-                  </a>
-               </div>
-               <div class="cases__block-card">
-                  <a href="case.html" class="cases__block-link">
-                     <img src="<?php bloginfo('template_url'); ?>/assets/img/cases/case-17.png" alt="case" class="cases__block-img">
-                     <p class="cases__block-name">S.LOG - Оператор логистики</p>
-                     <p class="cases__block-text">Создание интернет-магазина, комплексное продвижение, автоматизация
-                        продаж</p>
-                  </a>
-               </div>
-               <div class="cases__block-card">
-                  <a href="case.html" class="cases__block-link">
-                     <img src="<?php bloginfo('template_url'); ?>/assets/img/cases/case-18.png" alt="case" class="cases__block-img">
-                     <p class="cases__block-name">S.LOG - Оператор логистики</p>
-                     <p class="cases__block-text">Создание интернет-магазина, комплексное продвижение, автоматизация
-                        продаж</p>
-                  </a>
-               </div>
+                  foreach( $posts as $post ){
+                     setup_postdata( $post );
+                     ?>
+                        <div class="cases__block-card" style="background-repeat: no-repeat; border-radius: 20px; background-size: 100%; background-image: url(<?php
+                        if(has_post_thumbnail()) {
+                         the_post_thumbnail_url(); 
+                        } else {
+                           echo get_template_directory_uri() .'/assets/img/not-image.png';
+                        }
+                         ?>)">
+                              <p class="cases__block-name"><?php the_field('title__cases');?></p>
+                              <p class="cases__block-text"><?php the_field('work_cases');?></p>
+                     </div>
+                     <?php
+                  }
+                  wp_reset_postdata(); 
+               ?>
             </div>
             <!-- <a class="button__feedback button__feedback-header" id="button-casses" href="#">Смотреть больше</a> -->
          </div>

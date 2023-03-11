@@ -16,15 +16,15 @@ Template Name: Contacts-us
                   <div class="subheader__block-card"><img src="<?php bloginfo('template_url'); ?>/assets/svg/contacts/tel.svg" alt="phone">
                      <div class="subheader__block-incard">
                         <p class="subheader__incard-title">Телефон</p>
-                        <a href="tel:+79991131045"
-                           class="subheader__incard-text subheader__incard-link">+7(999)-113-10-45</a>
+                        <a href="tel:<?php the_field('call', 2);?>"
+                           class="subheader__incard-text subheader__incard-link"><?php the_field('tel', 2);?></a>
                      </div>
                   </div>
                   <div class="subheader__block-card"><img src="<?php bloginfo('template_url'); ?>/assets/svg/contacts/mail.svg" alt="email">
                      <div class="subheader__block-incard">
                         <p class="subheader__incard-title">Email</p>
-                        <a href="mailto:sales@webperspective.ru"
-                           class="subheader__incard-text subheader__incard-link">sales@webperspective.ru</a>
+                        <a href="mailto:<?php the_field('mail', 2);?>"
+                           class="subheader__incard-text subheader__incard-link"><?php the_field('mail', 2);?></a>
                      </div>
 
                   </div>
@@ -38,10 +38,10 @@ Template Name: Contacts-us
                      <div class="subheader__block-incard">
                         <p class="subheader__incard-title">Мессенджеры</p>
                         <div class="messengers">
-                           <a href="https://wa.me/+79991131045"> <img src="<?php bloginfo('template_url'); ?>/assets/svg/contacts/whatsap.svg"
+                           <a href="https://wa.me/<?php the_field('call', 2);?>"> <img src="<?php bloginfo('template_url'); ?>/assets/svg/contacts/whatsap.svg"
                                  alt="whatsap"></a>
-                           <a href="https://t.me/WebPerspective"><img src="<?php bloginfo('template_url'); ?>/assets/svg/contacts/telegram.svg" alt="telegram"></a>
-                           <a href="viber://chat?number=+79991131045"> <img src="<?php bloginfo('template_url'); ?>/assets/svg/contacts/viber.svg"
+                           <a href="https://t.me/<?php the_field('telegram', 2);?>"><img src="<?php bloginfo('template_url'); ?>/assets/svg/contacts/telegram.svg" alt="telegram"></a>
+                           <a href="viber://chat?number=<?php the_field('call', 2);?>"> <img src="<?php bloginfo('template_url'); ?>/assets/svg/contacts/viber.svg"
                                  alt="viber"></a>
 
                         </div>

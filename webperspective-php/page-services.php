@@ -22,7 +22,7 @@ Template Name: Services
                   <p class="services__block-text">Решаем задачи бизнеса, а не просто тратим бюджет. Привлекаем на сайт
                      целевых посетителей,
                      которые становятся клиентами и приносят прибыль. </p>
-                  <a class="button__feedback" href="context.html">Подробнее</a>
+                  <a class="button__feedback" href="<?php the_field('link_context',2);?>">Подробнее</a>
                </div>
                <div class="services__block-card">
                   <img src="<?php bloginfo('template_url'); ?>/assets/img/services/services-2.png" alt="services" class="services__block-img">
@@ -30,7 +30,7 @@ Template Name: Services
                   <p class="services__block-text">Решаем задачи бизнеса, а не просто тратим бюджет. Привлекаем на сайт
                      целевых посетителей,
                      которые становятся клиентами и приносят прибыль. </p>
-                  <a class="button__feedback" href="development.html">Подробнее</a>
+                  <a class="button__feedback" href="<?php the_field('link_develop',2);?>">Подробнее</a>
                </div>
                <div class="services__block-card">
                   <img src="<?php bloginfo('template_url'); ?>/assets/img/services/services-3.png" alt="services" class="services__block-img">
@@ -38,7 +38,7 @@ Template Name: Services
                   <p class="services__block-text">Решаем задачи бизнеса, а не просто тратим бюджет. Привлекаем на сайт
                      целевых посетителей,
                      которые становятся клиентами и приносят прибыль. </p>
-                  <a class="button__feedback" href="seo.html">Подробнее</a>
+                  <a class="button__feedback" href="<?php the_field('link_seo',2);?>">Подробнее</a>
                </div>
                <div class="services__block-card">
                   <img src="<?php bloginfo('template_url'); ?>/assets/img/services/services-4.png" alt="services" class="services__block-img">
@@ -46,7 +46,7 @@ Template Name: Services
                   <p class="services__block-text">Решаем задачи бизнеса, а не просто тратим бюджет. Привлекаем на сайт
                      целевых посетителей,
                      которые становятся клиентами и приносят прибыль. </p>
-                  <a class="button__feedback" href="target.html">Подробнее</a>
+                  <a class="button__feedback" href="<?php the_field('link_target',2);?>">Подробнее</a>
                </div>
                <div class="services__block-card">
                   <img src="<?php bloginfo('template_url'); ?>/assets/img/services/services-5.png" alt="services" class="services__block-img">
@@ -54,7 +54,7 @@ Template Name: Services
                   <p class="services__block-text">Решаем задачи бизнеса, а не просто тратим бюджет. Привлекаем на сайт
                      целевых посетителей,
                      которые становятся клиентами и приносят прибыль. </p>
-                  <a class="button__feedback" href="complex.html">Подробнее</a>
+                  <a class="button__feedback" href="<?php the_field('link_complex',2);?>">Подробнее</a>
                </div>
                <div class="services__block-card">
                   <img src="<?php bloginfo('template_url'); ?>/assets/img/services/services-6.png" alt="services" class="services__block-img">
@@ -62,7 +62,7 @@ Template Name: Services
                   <p class="services__block-text">Решаем задачи бизнеса, а не просто тратим бюджет. Привлекаем на сайт
                      целевых посетителей,
                      которые становятся клиентами и приносят прибыль. </p>
-                  <a class="button__feedback" href="brand.html">Подробнее</a>
+                  <a class="button__feedback" href="<?php the_field('link_brand',2);?>">Подробнее</a>
                </div>
                <div class="services__block-card">
                   <img src="<?php bloginfo('template_url'); ?>/assets/img/services/services-7.png" alt="services" class="services__block-img">
@@ -70,7 +70,7 @@ Template Name: Services
                   <p class="services__block-text">Решаем задачи бизнеса, а не просто тратим бюджет. Привлекаем на сайт
                      целевых посетителей,
                      которые становятся клиентами и приносят прибыль. </p>
-                  <a class="button__feedback" href="marketplace.html">Подробнее</a>
+                  <a class="button__feedback" href="<?php the_field('link_marketplace',2);?>">Подробнее</a>
                </div>
                <div class="services__block-card">
                   <img src="<?php bloginfo('template_url'); ?>/assets/img/services/services-8.png" alt="services" class="services__block-img">
@@ -78,7 +78,7 @@ Template Name: Services
                   <p class="services__block-text">Решаем задачи бизнеса, а не просто тратим бюджет. Привлекаем на сайт
                      целевых посетителей,
                      которые становятся клиентами и приносят прибыль. </p>
-                  <a class="button__feedback" href="calling.html">Подробнее</a>
+                  <a class="button__feedback" href="<?php the_field('link_auto',2);?>">Подробнее</a>
                </div>
                <div class="services__block-card">
                   <img src="<?php bloginfo('template_url'); ?>/assets/img/services/services-9.png" alt="services" class="services__block-img">
@@ -86,7 +86,7 @@ Template Name: Services
                   <p class="services__block-text">Решаем задачи бизнеса, а не просто тратим бюджет. Привлекаем на сайт
                      целевых посетителей,
                      которые становятся клиентами и приносят прибыль. </p>
-                  <a class="button__feedback" href="email.html">Подробнее</a>
+                  <a class="button__feedback" href="<?php the_field('link_email',2);?>">Подробнее</a>
                </div>
             </div>
          </div>

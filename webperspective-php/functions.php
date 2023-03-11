@@ -37,6 +37,10 @@ function filter_nav_menu_link_attributes($atts, $item, $args) {
       $atts['class'] = 'footer__block-list';
    };
 
+   if ($args->menu === 'Menu-slogan') {
+      $atts['class'] = 'slogan-text';
+   };
+
    return $atts;
 };
 

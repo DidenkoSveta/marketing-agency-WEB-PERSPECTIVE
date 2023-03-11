@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: Case
+Template Name: Мой шаблон кейса
  */
 ?>
 
@@ -10,10 +10,8 @@ Template Name: Case
          <div class="case__block">
             <div class="case__block-container">
                <div>
-                  <p class="case__block-text">Интернет- магазин корейской косметики оптом</p>
-                  <h1 class="case__block-title"> <span>Космосити. <br></span> “Продажа корейской косметики оптом” / 5
-                     лидов
-                     в день</h1>
+                  <p class="case__block-text"><?php the_field('case_company');?></p>
+                  <h1 class="case__block-title"> <span>Космосити. <br></span><?php the_field('title_case');?></h1>
                   <h5 class="case__block-subtitle">Продажа корейской косметики оптом<br>
                      514 целевых заявок <br>
                      789 руб. цена целевой заявки <br>

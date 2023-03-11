@@ -11,13 +11,19 @@ Template Name: Home
                <div class="block__slogan">
                   <h1><span>Увеличиваем</span> прибыль бизнеса используя digital-решения</h1>
                      <nav class="block__slogan-menu">
-                        <ul class="block__slogan-text">
-                           <li class="slogan-text"><a href="development.html">Веб-разработка</a></li>
-                           <li class="slogan-text"><a href="complex.html">Интернет-реклама</a></li>
-                           <li class="slogan-text"><a href="brand.html">Фирменный стиль</a></li>
-                           <li class="slogan-text"><a href="calling.html">Автоматизация продаж</a></li>
-                        </ul>
+                     <?php
+                        wp_nav_menu( [
+                           'menu'            => 'Menu-slogan',
+                           'container'       => false,
+                           'menu_class'      => 'block__slogan-text',
+                           'echo'            => true,
+                           'fallback_cb'     => 'wp_page_menu',
+                           'items_wrap'      => '<ul class="block__slogan-text">%3$s</ul>',
+                           'depth'           => 0,
+                        ] );
+                     ?>
                      </nav>
+                     
                   <div class="block__slogan-btns">
                      <a class="button__feedback button__feedback-header" id="button-slogan" href="#">Обсудить проект</a>
                      <button class="block__slogan-btn"><img src="<?php bloginfo('template_url'); ?>/assets/svg/download.svg" alt="download">Скачать
@@ -52,21 +58,21 @@ Template Name: Home
          <div class="service__block">
             <h2>Наши<span> Услуги</span></h2>
             <div class="service__block-grid">
-               <div class="service__block-card">
+            <div class="service__block-card">
                   <div class="card-face front"><img src="<?php bloginfo('template_url'); ?>/assets/svg/service/service1.svg" alt="service">Контекстная
-                     реклама
-                  </div>
+                     реклама</div>
                   <div class="card-face back">Самый эффективный вид существующей рекламы
-                     Объявления показываются горячим клиентам в поисковой выдаче Яндекса.
-                     <a class="detailed" href="context.html">Подробнее</a>
+                     Объявления показываются горячим клиентам в поисковой выдаче Яндекса
+                     <a class="detailed" href="<?php the_field('link_context',2);?>">Подробнее</a>
                   </div>
                </div>
+               
                <div class="service__block-card">
                   <div class="card-face front"><img src="<?php bloginfo('template_url'); ?>/assets/svg/service/service2.svg" alt="service">SEO продвижение
                   </div>
                   <div class="card-face back">Выведем сайт в ТОП Яндекс и Google
                      Обеспечим рост целевых клиентов и продаж
-                     <a class="detailed" href="seo.html">Подробнее</a>
+                     <a class="detailed" href="<?php the_field('link_seo',2);?>">Подробнее</a>
                   </div>
                </div>
                <div class="service__block-card">
@@ -75,7 +81,7 @@ Template Name: Home
                   <div class="card-face back">Landing page,
                      Корпоративные сайты,
                      Интернет-магазины
-                     <a class="detailed" href="development.html">Подробнее</a>
+                     <a class="detailed" href="<?php the_field('link_develop',2);?>">Подробнее</a>
                   </div>
                </div>
                <div class="service__block-card">
@@ -83,7 +89,7 @@ Template Name: Home
                      реклама
                   </div>
                   <div class="card-face back">Реклама в социальных сетях (Вконтакте, Одноклассники и т.д.)<a
-                        class="detailed" href="target.html">Подробнее</a>
+                        class="detailed" href="<?php the_field('link_target',2);?>">Подробнее</a>
                   </div>
                </div>
                <div class="service__block-card">
@@ -91,7 +97,7 @@ Template Name: Home
                      маркетинг
                   </div>
                   <div class="card-face back">Комплексный маркетинг
-                     Настройка и автоматизация бизнес процессов.<a class="detailed" href="complex.html">Подробнее</a>
+                     Настройка и автоматизация бизнес процессов.<a class="detailed" href="<?php the_field('link_complex',2);?>">Подробнее</a>
                   </div>
                </div>
                <div class="service__block-card">
@@ -99,7 +105,7 @@ Template Name: Home
                      стиль
                   </div>
                   <div class="card-face back">Уникальные логотипы визитки, баннеры, фирменные стили, всё чтобы
-                     сделать Вашу компанию неповторимой и узнаваемой.<a class="detailed" href="brand.html">Подробнее</a>
+                     сделать Вашу компанию неповторимой и узнаваемой.<a class="detailed" href="<?php the_field('link_brand',2);?>">Подробнее</a>
                   </div>
                </div>
                <div class="service__block-card">
@@ -107,20 +113,20 @@ Template Name: Home
                      маркетплейсах
                   </div>
                   <div class="card-face back">Авито, 2ГИС,
-                     Яндекс Услуги, и др <a class="detailed" href="marketplace.html">Подробнее</a></div>
+                     Яндекс Услуги, и др <a class="detailed" href="<?php the_field('link_marketplace',2);?>">Подробнее</a></div>
                </div>
                <div class="service__block-card">
                   <div class="card-face front"><img src="<?php bloginfo('template_url'); ?>/assets/svg/service/service8.svg" alt="service">Автоматизация
                      продаж
                   </div>
                   <div class="card-face back">Изучение ниши, Составление скриптов. <a class="detailed"
-                        href="calling.html">Подробнее</a><br></div>
+                        href="<?php the_field('link_auto',2);?>">Подробнее</a><br></div>
                </div>
                <div class="service__block-card">
                   <div class="card-face front"><img src="<?php bloginfo('template_url'); ?>/assets/svg/service/service9.svg" alt="service">Email маркетинг
                   </div>
                   <div class="card-face back">Продвижение продуктов или сервисов через email рассылки. <a
-                        class="detailed" href="email.html">Подробнее</a>
+                        class="detailed" href="<?php the_field('link_email',2);?>">Подробнее</a>
                   </div>
                </div>
             </div>

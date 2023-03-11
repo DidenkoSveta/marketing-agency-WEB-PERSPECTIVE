@@ -130,7 +130,7 @@ Template Name: Blog
                   </div>
                </a>
             </div>
-            <a class="button__feedback button__feedback-header" id="button-note" href="#">Смотреть больше</a>
+            <!-- <a class="button__feedback button__feedback-header" id="button-note" href="#">Смотреть больше</a> -->
          </div>
       </section>
    </main>
