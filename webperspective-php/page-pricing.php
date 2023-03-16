@@ -230,25 +230,7 @@ Template Name: Price
                <h5 class="contact__form-subtitle">Заполните форму, мы свяжемся с вами в ближайшее время</h5>
             </div>
             <div class="container">
-               <form action="action_page.php" enctype="multipart/form-data" method="post">
-
-                  <div class="contact__form-grid">
-                     <input type="text" id="contact-name" name="contactname" autocomplete="on" placeholder="Ваше имя">
-                     <label for="contact-name"></label>
-
-                     <input type="text" id="contact-tel" name="contacttel" autocomplete="on"
-                        placeholder="Номер телефона">
-                     <label for="contact-tel"></label>
-
-                     <input type="text" id="contact-site" name="contactsite" autocomplete="on"
-                        placeholder="Адрес сайта">
-                     <label for="contact-site"></label>
-                  </div>
-                  <textarea id="subject" name="subject" placeholder="Комментарий"></textarea>
-                  <label for="subject"></label>
-                  <input class="button__feedback button__contact" id="button__contact" type="submit" value="Отправить"
-                     name="submitform">
-               </form>
+            <?php echo do_shortcode('[contact-form-7 id="492" title="Форма обратной связи, статичная"]'); ?>   
             </div>
          </div>
       </section>
@@ -405,28 +387,35 @@ Template Name: Price
          <div class="articles__block">
             <h2>Последние<span> Статьи</span></h2>
             <div class="articles__block-grid">
-               <div class="articles__block-card">
-                  <img src="<?php bloginfo('template_url'); ?>/assets/img/articles/articles-1.png" alt="articles" class="articles__block-img">
-                  <div class="articles__block-incard">
-                     <p class="articles__block-subtitle">Как UI дизайн помогает настроить на покупку</p>
-                     <p class="articles__block-text">12 дней назад</p>
-                  </div>
-               </div>
-               <div class="articles__block-card">
-                  <img src="<?php bloginfo('template_url'); ?>/assets/img/articles/articles-2.png" alt="articles" class="articles__block-img">
-                  <div class="articles__block-incard">
-                     <p class="articles__block-subtitle">Топ 15 SEO расширений для Chrome</p>
-                     <p class="articles__block-text">12 дней назад</p>
-                  </div>
+            <?php 
+                  $posts = get_posts( array(
+                     'numberposts' => 3,
+                     'category_name'    => 'blog',
+                     'orderby'     => 'date',
+                     'order'       => 'DESC',
+                     'post_type'   => 'post',
+                     'suppress_filters' => true, 
+                  ) );
 
-               </div>
-               <div class="articles__block-card">
-                  <img src="<?php bloginfo('template_url'); ?>/assets/img/articles/articles-3.png" alt="articles" class="articles__block-img">
-                  <div class="articles__block-incard">
-                     <p class="articles__block-subtitle">Увеличение лидов, через SEO</p>
-                     <p class="articles__block-text">12 дней назад</p>
-                  </div>
-               </div>
+                  foreach( $posts as $post ){
+                     setup_postdata( $post );
+                     ?>
+                        <a href="<?php echo get_permalink();?>" class="articles__block-card" style="background-repeat: no-repeat; border-radius: 20px; background-size: 100%; background-image: url(<?php
+                        if(has_post_thumbnail()) {
+                         the_post_thumbnail_url(); 
+                        } else {
+                           echo get_template_directory_uri() .'/assets/img/not-image.png';
+                        }
+                         ?>)">
+                           <div class="articles__block-incard">
+                              <h5 class="articles__block-subtitle"><?php the_field('title-blog');?></h5>
+                              <p class="articles__block-text"><?php the_field('data_blog');?></p>
+                           </div>
+                     </a>
+                     <?php
+                  }
+                  wp_reset_postdata(); 
+               ?>
             </div>
          </div>
       </section>

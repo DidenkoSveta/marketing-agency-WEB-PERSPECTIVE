@@ -1,28 +1,26 @@
 <?php 
 /*
-Template Name: Мой шаблон кейса
+Template Name: Мой шаблон для кейсов
+Template Post Type: post, cases
  */
 ?>
-
 <?php get_header();?>
-   <main>
-      <section class="case">
+
+<main>
+<section class="case">
          <div class="case__block">
             <div class="case__block-container">
-
-                  <p class="case__block-text"><?php the_field('case_company');?></p>
-                  <h1 class="case__block-title"> <span>Космосити. <br></span><?php the_field('title_case');?></h1>
-                  <h5 class="case__block-subtitle">Продажа корейской косметики оптом<br>
-                     514 целевых заявок <br>
-                     789 руб. цена целевой заявки <br>
-                     5 заявок в день</h5>
-                  <a class="button__feedback button__case-link" href="#">Посетить сайт</a>
-
-               <img src="<?php bloginfo('template_url'); ?>/assets/img/case/case-1.png" alt="case" class="case__block-img">
+               <div>
+                  <p class="case__block-text"><?php the_field('title-my_case');?></p>
+                  <h1 class="case__block-title"> <span><?php the_field('case-title1');?><br></span><?php the_field('case-title2');?></h1>
+                  <h5 class="case__block-subtitle"><?php the_field('list_position');?></h5>
+                  <a class="button__feedback button__case-link" href="<?php the_field('case-share');?>">Посетить сайт</a>
+               </div>
+               <img src="<?php the_field('case-img1');?>" class="case__block-img">
             </div>
          </div>
       </section>
-      <section class="initial">
+<section class="initial">
          <div class="initial__block">
             <hr>
             <h2 class="initial__block-title">Исходные данные</h2>
@@ -228,25 +226,7 @@ Template Name: Мой шаблон кейса
                <h5 class="contact__form-subtitle">Заполните форму, мы свяжемся с вами в ближайшее время</h5>
             </div>
             <div class="container">
-               <form action="action_page.php" enctype="multipart/form-data" method="post">
-
-                  <div class="contact__form-grid">
-                     <input type="text" id="contact-name" name="contactname" autocomplete="on" placeholder="Ваше имя">
-                     <label for="contact-name"></label>
-
-                     <input type="text" id="contact-tel" name="contacttel" autocomplete="on"
-                        placeholder="Номер телефона">
-                     <label for="contact-tel"></label>
-
-                     <input type="text" id="contact-site" name="contactsite" autocomplete="on"
-                        placeholder="Адрес сайта">
-                     <label for="contact-site"></label>
-                  </div>
-                  <textarea id="subject" name="subject" placeholder="Комментарий"></textarea>
-                  <label for="subject"></label>
-                  <input class="button__feedback button__contact" id="button__contact" type="submit" value="Отправить"
-                     name="submitform">
-               </form>
+            <?php echo do_shortcode('[contact-form-7 id="492" title="Форма обратной связи, статичная"]'); ?>   
             </div>
          </div>
       </section>
@@ -256,30 +236,46 @@ Template Name: Мой шаблон кейса
             <h5 class="cases__block-subtitle">Реализовываем проекты любой сложности, помогая бизнесу и клиентам найти
                друг друга в интернете.</h5>
             <div class="cases__block-grid">
-               <div class="cases__block-card">
-                  <a href="case.html" class="cases__block-link">
-                     <img src="<?php bloginfo('template_url'); ?>/assets/img/cases/case-1.png" alt="case" class="cases__block-img">
-                     <p class="cases__block-name">PALTO.RU - интернет-магазин пальто</p>
-                     <p class="cases__block-text">Создание интернет-магазина</p>
-                  </a>
-               </div>
-               <div class="cases__block-card">
-                  <a href="case.html" class="cases__block-link">
-                     <img src="<?php bloginfo('template_url'); ?>/assets/img/cases/case-2.png" alt="case" class="cases__block-img">
-                     <p class="cases__block-name">NAHODU - интернет- магазин автозапчастей</p>
-                     <p class="cases__block-text">Создание интернет-магазина, контекстная реклама, seo - оптимизация</p>
-                  </a>
-               </div>
-               <div class="cases__block-card">
-                  <a href="case.html" class="cases__block-link">
-                     <img src="<?php bloginfo('template_url'); ?>/assets/img/cases/case-3.png" alt="case" class="cases__block-img">
-                     <p class="cases__block-name">COFER- бренд термопосуды</p>
-                     <p class="cases__block-text">Комплексное продвижение интернет магазина </p>
-                  </a>
-               </div>
+            <?php 
+                  $posts = get_posts( array(
+                     'numberposts' => 3,
+                     'category_name'    => 'cases',
+                     'orderby'     => 'date',
+                     'order'       => 'DESC',
+                     'post_type'   => 'post',
+                     'suppress_filters' => true, 
+                  ) );
+
+                  foreach( $posts as $post ){
+                     setup_postdata( $post );
+                     ?>
+                        <a href="<?php echo get_permalink();?>" class="cases__block-card" style="background-repeat: no-repeat; border-radius: 20px; background-size: 100%; background-image: url(<?php
+                        if(has_post_thumbnail()) {
+                         the_post_thumbnail_url(); 
+                        } else {
+                           echo get_template_directory_uri() .'/assets/img/not-image.png';
+                        }
+                         ?>)">
+                              <p class="cases__block-name"><?php the_field('title-my_cases');?></p>
+                              <p class="cases__block-text"><?php the_field('work-my_cases');?></p>
+                     </a>
+                     <?php
+                  }
+                  wp_reset_postdata(); 
+               ?>
             </div>
          </div>
       </section>
-   </main>
+</main>
+<?php
+while ( have_posts() ) :
+   the_post();
 
-   <?php get_footer();?>
+   // get_template_part( 'template-parts/content', get_post_type() );
+
+endwhile; 
+?>
+
+
+
+<?php get_footer();?>

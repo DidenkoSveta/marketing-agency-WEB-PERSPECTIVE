@@ -196,25 +196,7 @@ Template Name: Services
                <h5 class="contact__form-subtitle">Заполните форму, мы свяжемся с вами в ближайшее время</h5>
             </div>
             <div class="container">
-               <form action="action_page.php" enctype="multipart/form-data" method="post">
-
-                  <div class="contact__form-grid">
-                     <input type="text" id="contact-name" name="contactname" autocomplete="on" placeholder="Ваше имя">
-                     <label for="contact-name"></label>
-
-                     <input type="text" id="contact-tel" name="contacttel" autocomplete="on"
-                        placeholder="Номер телефона">
-                     <label for="contact-tel"></label>
-
-                     <input type="text" id="contact-site" name="contactsite" autocomplete="on"
-                        placeholder="Адрес сайта">
-                     <label for="contact-site"></label>
-                  </div>
-                  <textarea id="subject" name="subject" placeholder="Комментарий"></textarea>
-                  <label for="subject"></label>
-                  <input class="button__feedback button__contact" id="button__contact" type="submit" value="Отправить"
-                     name="submitform">
-               </form>
+            <?php echo do_shortcode('[contact-form-7 id="492" title="Форма обратной связи, статичная"]'); ?>   
             </div>
          </div>
       </section>
